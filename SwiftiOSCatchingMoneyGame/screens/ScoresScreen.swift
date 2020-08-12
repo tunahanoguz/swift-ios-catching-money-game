@@ -7,32 +7,38 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct ScoresScreen: View {
     @Environment(\.localStatusBarStyle) var statusBarStyle
-    
     @State var selectedIndex = 0
     
     var body: some View {
-        VStack {
-            TopTabBar(selectedIndex: $selectedIndex)
-            
-            GeometryReader {_ in
-                VStack {
-                    if self.selectedIndex == 0 {
-                        OnlineScoresScreen()
-                    } else {
-                        OfflineScoresScreen()
+        ZStack {
+            VStack {
+                TopTabBar(selectedIndex: $selectedIndex)
+                
+                GeometryReader {_ in
+                    VStack {
+                        if self.selectedIndex == 0 {
+                            OnlineScoresScreen()
+                        } else {
+                            OfflineScoresScreen()
+                        }
                     }
                 }
             }
+            .background(Color.white)
+            .onAppear {
+                self.statusBarStyle.currentStyle = .lightContent
+            }
+            .onDisappear {
+                 self.statusBarStyle.currentStyle = .default
+             }
         }
-        .onAppear {
-            self.statusBarStyle.currentStyle = .lightContent
-        }
-        .onDisappear {
-             self.statusBarStyle.currentStyle = .default
-         }
+        .padding(.top, UIApplication.shared.windows.last?.safeAreaInsets.top)
+        .background(Color.black)
+        .edgesIgnoringSafeArea(.all)
     }
 }
 
