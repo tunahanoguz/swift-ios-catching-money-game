@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06026B3224E436F400967877 /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06026B3124E436F300967877 /* HostingController.swift */; };
 		068C838024E3DB9F00F5D1AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068C837F24E3DB9F00F5D1AF /* AppDelegate.swift */; };
 		068C838224E3DB9F00F5D1AF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068C838124E3DB9F00F5D1AF /* SceneDelegate.swift */; };
 		068C838424E3DB9F00F5D1AF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068C838324E3DB9F00F5D1AF /* ContentView.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06026B3124E436F300967877 /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
 		068C837C24E3DB9F00F5D1AF /* SwiftiOSCatchingMoneyGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftiOSCatchingMoneyGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		068C837F24E3DB9F00F5D1AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		068C838124E3DB9F00F5D1AF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				068C837F24E3DB9F00F5D1AF /* AppDelegate.swift */,
 				068C838124E3DB9F00F5D1AF /* SceneDelegate.swift */,
 				068C838324E3DB9F00F5D1AF /* ContentView.swift */,
+				06026B3124E436F300967877 /* HostingController.swift */,
 				068C838524E3DBA000F5D1AF /* Assets.xcassets */,
 				068C838A24E3DBA000F5D1AF /* LaunchScreen.storyboard */,
 				068C838D24E3DBA000F5D1AF /* Info.plist */,
@@ -192,6 +195,7 @@
 				068C83A324E41E0800F5D1AF /* OfflineScoresScreen.swift in Sources */,
 				068C838024E3DB9F00F5D1AF /* AppDelegate.swift in Sources */,
 				068C839B24E3EAD400F5D1AF /* HomeScreen.swift in Sources */,
+				06026B3224E436F400967877 /* HostingController.swift in Sources */,
 				068C839824E3E96C00F5D1AF /* NavigationTab.swift in Sources */,
 				068C83A124E41B5E00F5D1AF /* ScoreItem.swift in Sources */,
 				068C838224E3DB9F00F5D1AF /* SceneDelegate.swift in Sources */,
