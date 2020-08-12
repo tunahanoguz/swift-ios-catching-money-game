@@ -9,37 +9,40 @@
 import SwiftUI
 
 struct TopTabBar: View {
-    @State var selectedIndex = 0;
+    @Binding var selectedIndex: Int
     
     var body: some View {
-        HStack(alignment: .center) {
-            Button(action: {
-                self.selectedIndex = 0
-            }) {
-                Text("Online")
-                    .fontWeight(selectedIndex == 0 ? Font.Weight.medium : Font.Weight.regular)
+        VStack {
+            HStack(alignment: .center) {
+                Button(action: {
+                    self.selectedIndex = 0
+                }) {
+                    Text("Online")
+                        .fontWeight(selectedIndex == 0 ? Font.Weight.medium : Font.Weight.regular)
+                }
+                .frame(maxWidth: .infinity / 2)
+                .foregroundColor(Color.white)
+                
+                Button(action: {
+                    self.selectedIndex = 1
+                }) {
+                    Text("Offline")
+                    .fontWeight(selectedIndex == 1 ? Font.Weight.medium : Font.Weight.regular)
+                }
+                .frame(maxWidth: .infinity / 2)
+                .foregroundColor(Color.white)
             }
-            .frame(maxWidth: .infinity / 2)
-            .foregroundColor(Color.white)
-            
-            Button(action: {
-                self.selectedIndex = 1
-            }) {
-                Text("Offline")
-                .fontWeight(selectedIndex == 1 ? Font.Weight.medium : Font.Weight.regular)
-            }
-            .frame(maxWidth: .infinity / 2)
-            .foregroundColor(Color.white)
+            .frame(maxWidth: .infinity)
+            .padding(.vertical, 16.0)
+            .padding(.horizontal, 20.0)
+            .background(Color.green)
         }
-        .frame(maxWidth: .infinity)
-        .padding(.vertical, 16.0)
-        .padding(.horizontal, 20.0)
-        .background(Color.green)
     }
 }
 
 struct TopTabBar_Previews: PreviewProvider {
+    @State static var selectedIndex: Int = 0
     static var previews: some View {
-        TopTabBar()
+        TopTabBar(selectedIndex: $selectedIndex)
     }
 }
