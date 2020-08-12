@@ -14,6 +14,8 @@
 		068C838924E3DBA000F5D1AF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 068C838824E3DBA000F5D1AF /* Preview Assets.xcassets */; };
 		068C838C24E3DBA000F5D1AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 068C838A24E3DBA000F5D1AF /* LaunchScreen.storyboard */; };
 		068C839624E3DD5E00F5D1AF /* HomeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068C839524E3DD5E00F5D1AF /* HomeButton.swift */; };
+		068C839824E3E96C00F5D1AF /* NavigationTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068C839724E3E96C00F5D1AF /* NavigationTab.swift */; };
+		068C839B24E3EAD400F5D1AF /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068C839A24E3EAD400F5D1AF /* HomeScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		068C838B24E3DBA000F5D1AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		068C838D24E3DBA000F5D1AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		068C839524E3DD5E00F5D1AF /* HomeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeButton.swift; sourceTree = "<group>"; };
+		068C839724E3E96C00F5D1AF /* NavigationTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTab.swift; sourceTree = "<group>"; };
+		068C839A24E3EAD400F5D1AF /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 		068C837E24E3DB9F00F5D1AF /* SwiftiOSCatchingMoneyGame */ = {
 			isa = PBXGroup;
 			children = (
+				068C839924E3EAA200F5D1AF /* screens */,
 				068C839424E3DD3700F5D1AF /* components */,
 				068C837F24E3DB9F00F5D1AF /* AppDelegate.swift */,
 				068C838124E3DB9F00F5D1AF /* SceneDelegate.swift */,
@@ -82,8 +87,17 @@
 			isa = PBXGroup;
 			children = (
 				068C839524E3DD5E00F5D1AF /* HomeButton.swift */,
+				068C839724E3E96C00F5D1AF /* NavigationTab.swift */,
 			);
 			path = components;
+			sourceTree = "<group>";
+		};
+		068C839924E3EAA200F5D1AF /* screens */ = {
+			isa = PBXGroup;
+			children = (
+				068C839A24E3EAD400F5D1AF /* HomeScreen.swift */,
+			);
+			path = screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +173,8 @@
 			files = (
 				068C839624E3DD5E00F5D1AF /* HomeButton.swift in Sources */,
 				068C838024E3DB9F00F5D1AF /* AppDelegate.swift in Sources */,
+				068C839B24E3EAD400F5D1AF /* HomeScreen.swift in Sources */,
+				068C839824E3E96C00F5D1AF /* NavigationTab.swift in Sources */,
 				068C838224E3DB9F00F5D1AF /* SceneDelegate.swift in Sources */,
 				068C838424E3DB9F00F5D1AF /* ContentView.swift in Sources */,
 			);
