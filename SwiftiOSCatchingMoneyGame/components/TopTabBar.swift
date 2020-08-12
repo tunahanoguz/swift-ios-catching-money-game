@@ -35,7 +35,7 @@ struct TopTabBar: View {
             .frame(maxWidth: .infinity)
             .padding(.vertical, 16.0)
             .padding(.horizontal, 20.0)
-            .background(Color.green)
+            .background(Color.black)
         }
     }
 }
