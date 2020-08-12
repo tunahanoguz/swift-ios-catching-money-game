@@ -13,6 +13,7 @@
 		068C838624E3DBA000F5D1AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 068C838524E3DBA000F5D1AF /* Assets.xcassets */; };
 		068C838924E3DBA000F5D1AF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 068C838824E3DBA000F5D1AF /* Preview Assets.xcassets */; };
 		068C838C24E3DBA000F5D1AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 068C838A24E3DBA000F5D1AF /* LaunchScreen.storyboard */; };
+		068C839624E3DD5E00F5D1AF /* HomeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068C839524E3DD5E00F5D1AF /* HomeButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		068C838824E3DBA000F5D1AF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		068C838B24E3DBA000F5D1AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		068C838D24E3DBA000F5D1AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		068C839524E3DD5E00F5D1AF /* HomeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		068C837E24E3DB9F00F5D1AF /* SwiftiOSCatchingMoneyGame */ = {
 			isa = PBXGroup;
 			children = (
+				068C839424E3DD3700F5D1AF /* components */,
 				068C837F24E3DB9F00F5D1AF /* AppDelegate.swift */,
 				068C838124E3DB9F00F5D1AF /* SceneDelegate.swift */,
 				068C838324E3DB9F00F5D1AF /* ContentView.swift */,
@@ -73,6 +76,14 @@
 				068C838824E3DBA000F5D1AF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		068C839424E3DD3700F5D1AF /* components */ = {
+			isa = PBXGroup;
+			children = (
+				068C839524E3DD5E00F5D1AF /* HomeButton.swift */,
+			);
+			path = components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +157,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				068C839624E3DD5E00F5D1AF /* HomeButton.swift in Sources */,
 				068C838024E3DB9F00F5D1AF /* AppDelegate.swift in Sources */,
 				068C838224E3DB9F00F5D1AF /* SceneDelegate.swift in Sources */,
 				068C838424E3DB9F00F5D1AF /* ContentView.swift in Sources */,
