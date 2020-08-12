@@ -9,8 +9,23 @@
 import SwiftUI
 
 struct ScoresScreen: View {
+    @State var selectedIndex = 0
+    
     var body: some View {
-        TopTabBar()
+        VStack {
+            TopTabBar(selectedIndex: $selectedIndex)
+            
+            GeometryReader {_ in
+                VStack {
+                    if self.selectedIndex == 0 {
+                        OnlineScoresScreen()
+                    } else {
+                        OfflineScoresScreen()
+                    }
+                }
+            }
+        }
+        .background(Color.black)
     }
 }
 
