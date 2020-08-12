@@ -18,6 +18,7 @@
 		068C839B24E3EAD400F5D1AF /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068C839A24E3EAD400F5D1AF /* HomeScreen.swift */; };
 		068C839D24E417CC00F5D1AF /* TopTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068C839C24E417CB00F5D1AF /* TopTabBar.swift */; };
 		068C839F24E41A1F00F5D1AF /* OnlineScoresScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068C839E24E41A1F00F5D1AF /* OnlineScoresScreen.swift */; };
+		068C83A124E41B5E00F5D1AF /* ScoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068C83A024E41B5E00F5D1AF /* ScoreItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		068C839A24E3EAD400F5D1AF /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		068C839C24E417CB00F5D1AF /* TopTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTabBar.swift; sourceTree = "<group>"; };
 		068C839E24E41A1F00F5D1AF /* OnlineScoresScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineScoresScreen.swift; sourceTree = "<group>"; };
+		068C83A024E41B5E00F5D1AF /* ScoreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				068C839524E3DD5E00F5D1AF /* HomeButton.swift */,
 				068C839724E3E96C00F5D1AF /* NavigationTab.swift */,
 				068C839C24E417CB00F5D1AF /* TopTabBar.swift */,
+				068C83A024E41B5E00F5D1AF /* ScoreItem.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 				068C838024E3DB9F00F5D1AF /* AppDelegate.swift in Sources */,
 				068C839B24E3EAD400F5D1AF /* HomeScreen.swift in Sources */,
 				068C839824E3E96C00F5D1AF /* NavigationTab.swift in Sources */,
+				068C83A124E41B5E00F5D1AF /* ScoreItem.swift in Sources */,
 				068C838224E3DB9F00F5D1AF /* SceneDelegate.swift in Sources */,
 				068C838424E3DB9F00F5D1AF /* ContentView.swift in Sources */,
 				068C839F24E41A1F00F5D1AF /* OnlineScoresScreen.swift in Sources */,
