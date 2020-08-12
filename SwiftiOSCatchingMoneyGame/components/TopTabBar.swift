@@ -18,7 +18,7 @@ struct TopTabBar: View {
                     self.selectedIndex = 0
                 }) {
                     Text("Online")
-                        .fontWeight(selectedIndex == 0 ? Font.Weight.medium : Font.Weight.regular)
+                        .fontWeight(selectedIndex == 0 ? Font.Weight.bold : Font.Weight.regular)
                 }
                 .frame(maxWidth: .infinity / 2)
                 .foregroundColor(Color.white)
@@ -27,7 +27,7 @@ struct TopTabBar: View {
                     self.selectedIndex = 1
                 }) {
                     Text("Offline")
-                    .fontWeight(selectedIndex == 1 ? Font.Weight.medium : Font.Weight.regular)
+                    .fontWeight(selectedIndex == 1 ? Font.Weight.bold : Font.Weight.regular)
                 }
                 .frame(maxWidth: .infinity / 2)
                 .foregroundColor(Color.white)
