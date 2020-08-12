@@ -10,7 +10,20 @@ import SwiftUI
 
 struct OnlineScoresScreen: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .leading, spacing: 10.0) {
+            ScoreItem(scoreID: "123asda", scoreType: 0, totalScore: 100, date: "2020 August, 12")
+            
+            ScoreItem(scoreID: "123asda", scoreType: 0, totalScore: 100, date: "2020 August, 12")
+            
+            ScoreItem(scoreID: "123asda", scoreType: 0, totalScore: 100, date: "2020 August, 12")
+            
+            ScoreItem(scoreID: "123asda", scoreType: 0, totalScore: 100, date: "2020 August, 12")
+            
+            ScoreItem(scoreID: "123asda", scoreType: 0, totalScore: 100, date: "2020 August, 12")
+            
+            Spacer()
+        }
+        .padding(.horizontal, 30.0)
     }
 }
 
