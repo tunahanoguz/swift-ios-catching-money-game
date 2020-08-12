@@ -25,7 +25,6 @@ struct ScoresScreen: View {
                 }
             }
         }
-        .background(Color.black)
     }
 }
 
