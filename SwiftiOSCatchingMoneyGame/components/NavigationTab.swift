@@ -17,7 +17,7 @@ struct NavigationTab: View {
                     Text("Home")
                 }
             
-            Text("Another Tab")
+            ScoresScreen()
                 .tabItem {
                     Image(systemName: "waveform.path.ecg")
                     Text("Scores")
