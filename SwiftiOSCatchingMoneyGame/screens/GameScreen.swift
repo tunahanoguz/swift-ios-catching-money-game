@@ -9,8 +9,8 @@
 import SwiftUI
 
 struct GameScreen: View {
-    let moneyPlaceRandomNumber: Int = Int.random(in: 0..<7)
-    let moneyTypeRandomNumber: Int = Int.random(in: 0..<7)
+    @State var moneyPlaceRandomNumber: Int = Int.random(in: 0..<12)
+    @State var moneyTypeRandomNumber: Int = Int.random(in: 0..<8)
     var moneys: [String] = ["tl", "dolar", "euro", "pound", "gold", "bitcoin", "etherium", "dodge"]
     
     @State var time: Int = 10
@@ -23,6 +23,8 @@ struct GameScreen: View {
     @State var bitcoinScore = 0
     @State var etheriumScore = 0
     @State var dodgeScore = 0
+    @State var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    @State private var isShowedEndGameAlert = false
     
     func increaseScore() {
         totalScore += 1
@@ -46,30 +48,77 @@ struct GameScreen: View {
         }
     }
     
+    func returnRealPlace(place: Int, money: Int) -> Int {
+        let firstPlaceArg = place*3
+        let secondPlaceArg = money
+        
+        return firstPlaceArg+secondPlaceArg
+    }
+    
+    func finishGame() {
+        self.time = 10
+        self.totalScore = 0
+        self.tlScore = 0
+        self.dolarScore = 0
+        self.euroScore = 0
+        self.poundScore = 0
+        self.goldScore = 0
+        self.bitcoinScore = 0
+        self.etheriumScore = 0
+        self.dodgeScore = 0
+    }
+    
+    func restartGame() {
+        finishGame()
+        
+        self.timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    }
+    
     var body: some View {
         NavigationView {
             VStack() {
                 Text("Time: " + String(time))
-                    .font(.system(size: 20.0))
-                    .fontWeight(Font.Weight.medium)
-                
+                .font(.system(size: 20.0))
+                .fontWeight(Font.Weight.medium)
+                .onReceive(timer) { time in
+                    if self.time > 0 {
+                        self.time -= 1
+                        self.moneyPlaceRandomNumber = Int.random(in: 0..<7)
+                        self.moneyTypeRandomNumber = Int.random(in: 0..<7)
+                    } else {
+                        self.timer.upstream.connect().cancel()
+                        self.isShowedEndGameAlert = true
+                    }
+                }
+                    
+
                 Text("Score: " + String(totalScore))
-                
+
                 VStack {
                     ForEach(0..<4) {place in
                         HStack {
                             ForEach(0..<3) {money in
-                                MoneyButton(moneyName: self.moneys[self.moneyTypeRandomNumber], increaseScore: self.increaseScore, place: place * money, randomPlace: self.moneyPlaceRandomNumber)
+                                MoneyButton(moneyName: self.moneys[self.moneyTypeRandomNumber], increaseScore: self.increaseScore, place: self.returnRealPlace(place: place, money: money), randomPlace: self.moneyPlaceRandomNumber)
                             }
                         }
                     }
-                    
+
+                }
+                .alert(isPresented: $isShowedEndGameAlert) {
+                    return Alert(title: Text("Game over!"), message: Text("The game is over. You have caught \(totalScore) coins in total and \(tlScore) Turkish Lira, \(dolarScore) Dolar, \(euroScore) Euro, \(poundScore) Pound, \(goldScore) Gold, \(bitcoinScore) Bitcoin, \(etheriumScore) Etherium, \(dodgeScore) Dodge."), primaryButton: Alert.Button.default(Text("Restart"), action: {
+                        self.restartGame()
+                        }), secondaryButton: Alert.Button.cancel(Text("Finish"), action: {
+                            self.finishGame()
+                        }))
                 }
             }
             .navigationBarTitle("")
             .navigationBarHidden(true)
             .navigationBarBackButtonHidden(true)
             .padding(30.0)
+            .onAppear() {
+                self.timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+            }
         }
     }
 }
