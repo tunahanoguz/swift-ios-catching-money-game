@@ -14,16 +14,20 @@ struct HomeScreen: View {
     }
     
     var body: some View {
-        VStack(spacing: 30.0) {
-            HomeButton(text: "New game", buttonFunc: printSomething, firstColor: "#667eea", secondColor: "#764ba2", icon: "circle")
-            
-            HomeButton(text: "Show scores", buttonFunc: printSomething, firstColor: "#2af598", secondColor: "#009efd", icon: "waveform.path.ecg")
-            
-            HomeButton(text: "Show ratings", buttonFunc: printSomething, firstColor: "#6a11cb", secondColor: "#2575fc", icon: "rosette")
-            
-            HomeButton(text: "Sign out", buttonFunc: printSomething, firstColor: "#ff0844", secondColor: "#ffb199", icon: "arrow.right.to.line.alt")
+        NavigationView {
+            VStack(spacing: 30.0) {
+                NewGameLink(text: "New game", firstColor: "#667eea", secondColor: "#764ba2", icon: "circle")
+                
+                HomeButton(text: "Show scores", buttonFunc: printSomething, firstColor: "#2af598", secondColor: "#009efd", icon: "waveform.path.ecg")
+                
+                HomeButton(text: "Show ratings", buttonFunc: printSomething, firstColor: "#6a11cb", secondColor: "#2575fc", icon: "rosette")
+                
+                HomeButton(text: "Sign out", buttonFunc: printSomething, firstColor: "#ff0844", secondColor: "#ffb199", icon: "arrow.right.to.line.alt")
+            }
+            .padding(30.0)
+            .navigationBarTitle("")
+            .navigationBarHidden(true)
         }
-        .padding(30.0)
     }
 }
 
