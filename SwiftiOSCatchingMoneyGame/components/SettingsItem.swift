@@ -34,7 +34,7 @@ struct SettingsItem: View {
                                 .font(.system(size: 14.0))
                                 .foregroundColor(Color.gray)
                                 .lineLimit(nil)
-                                .multilineTextAlignment(.leading)
+                                .fixedSize(horizontal: false, vertical: true)
                             }
                             
                             Spacer()
@@ -45,9 +45,7 @@ struct SettingsItem: View {
                     }
                     .foregroundColor(Color.black)
                     
-                    Rectangle()
-                        .fill(Color(hex: "#DDDDDD"))
-                        .frame(maxHeight: 0.6)
+                    Divider()
                 }
             }
         }
