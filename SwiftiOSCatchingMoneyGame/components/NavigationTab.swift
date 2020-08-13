@@ -29,7 +29,7 @@ struct NavigationTab: View {
                     Text("Ratings")
                 }
             
-            Text("The Last Tab")
+            SettingsScreen()
             .tabItem {
                 Image(systemName: "gear")
                 Text("Settings")
