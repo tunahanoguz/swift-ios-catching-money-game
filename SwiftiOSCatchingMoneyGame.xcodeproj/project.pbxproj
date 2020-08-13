@@ -11,6 +11,7 @@
 		065943A024E517A700973731 /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0659439F24E517A700973731 /* SettingsScreen.swift */; };
 		065943A224E519B800973731 /* SettingsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065943A124E519B800973731 /* SettingsItem.swift */; };
 		065943A524E51A9700973731 /* SettingsItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065943A424E51A9700973731 /* SettingsItemModel.swift */; };
+		065943A924E5266600973731 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065943A824E5266600973731 /* Color+Extension.swift */; };
 		068C838024E3DB9F00F5D1AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068C837F24E3DB9F00F5D1AF /* AppDelegate.swift */; };
 		068C838224E3DB9F00F5D1AF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068C838124E3DB9F00F5D1AF /* SceneDelegate.swift */; };
 		068C838424E3DB9F00F5D1AF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068C838324E3DB9F00F5D1AF /* ContentView.swift */; };
@@ -33,6 +34,7 @@
 		0659439F24E517A700973731 /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
 		065943A124E519B800973731 /* SettingsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItem.swift; sourceTree = "<group>"; };
 		065943A424E51A9700973731 /* SettingsItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItemModel.swift; sourceTree = "<group>"; };
+		065943A824E5266600973731 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		068C837C24E3DB9F00F5D1AF /* SwiftiOSCatchingMoneyGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftiOSCatchingMoneyGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		068C837F24E3DB9F00F5D1AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		068C838124E3DB9F00F5D1AF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				068C838A24E3DBA000F5D1AF /* LaunchScreen.storyboard */,
 				068C838D24E3DBA000F5D1AF /* Info.plist */,
 				068C838724E3DBA000F5D1AF /* Preview Content */,
+				065943A824E5266600973731 /* Color+Extension.swift */,
 			);
 			path = SwiftiOSCatchingMoneyGame;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				068C839824E3E96C00F5D1AF /* NavigationTab.swift in Sources */,
 				068C83A124E41B5E00F5D1AF /* ScoreItem.swift in Sources */,
 				068C838224E3DB9F00F5D1AF /* SceneDelegate.swift in Sources */,
+				065943A924E5266600973731 /* Color+Extension.swift in Sources */,
 				068C838424E3DB9F00F5D1AF /* ContentView.swift in Sources */,
 				068C839F24E41A1F00F5D1AF /* OnlineScoresScreen.swift in Sources */,
 				065943A224E519B800973731 /* SettingsItem.swift in Sources */,
