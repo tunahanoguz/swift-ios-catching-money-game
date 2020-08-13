@@ -22,6 +22,7 @@
 		068C83A124E41B5E00F5D1AF /* ScoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068C83A024E41B5E00F5D1AF /* ScoreItem.swift */; };
 		068C83A324E41E0800F5D1AF /* OfflineScoresScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068C83A224E41E0800F5D1AF /* OfflineScoresScreen.swift */; };
 		068C83A524E41E4E00F5D1AF /* ScoresScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068C83A424E41E4E00F5D1AF /* ScoresScreen.swift */; };
+		06BAC5F024E5089C00551E80 /* RatingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BAC5EF24E5089C00551E80 /* RatingsScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		068C83A024E41B5E00F5D1AF /* ScoreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreItem.swift; sourceTree = "<group>"; };
 		068C83A224E41E0800F5D1AF /* OfflineScoresScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineScoresScreen.swift; sourceTree = "<group>"; };
 		068C83A424E41E4E00F5D1AF /* ScoresScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresScreen.swift; sourceTree = "<group>"; };
+		06BAC5EF24E5089C00551E80 /* RatingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingsScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				068C839E24E41A1F00F5D1AF /* OnlineScoresScreen.swift */,
 				068C83A224E41E0800F5D1AF /* OfflineScoresScreen.swift */,
 				068C83A424E41E4E00F5D1AF /* ScoresScreen.swift */,
+				06BAC5EF24E5089C00551E80 /* RatingsScreen.swift */,
 			);
 			path = screens;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				068C839D24E417CC00F5D1AF /* TopTabBar.swift in Sources */,
 				068C839624E3DD5E00F5D1AF /* HomeButton.swift in Sources */,
 				068C83A324E41E0800F5D1AF /* OfflineScoresScreen.swift in Sources */,
+				06BAC5F024E5089C00551E80 /* RatingsScreen.swift in Sources */,
 				068C838024E3DB9F00F5D1AF /* AppDelegate.swift in Sources */,
 				068C839B24E3EAD400F5D1AF /* HomeScreen.swift in Sources */,
 				06026B3224E436F400967877 /* HostingController.swift in Sources */,
