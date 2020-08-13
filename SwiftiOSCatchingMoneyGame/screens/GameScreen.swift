@@ -18,6 +18,10 @@ struct GameScreen: View {
                 
                 Text("Score: 0")
                 
+                Image("bitcoin")
+                .resizable()
+                    .frame(width: 100.0, height: 100.0)
+                
                 Spacer()
             }
             .navigationBarHidden(true)
