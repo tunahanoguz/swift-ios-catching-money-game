@@ -46,7 +46,7 @@ struct SettingsItem: View {
                     .foregroundColor(Color.black)
                     
                     Rectangle()
-                        .fill(Color.gray)
+                        .fill(Color(hex: "#DDDDDD"))
                         .frame(maxHeight: 0.6)
                     
 //                    Divider()
