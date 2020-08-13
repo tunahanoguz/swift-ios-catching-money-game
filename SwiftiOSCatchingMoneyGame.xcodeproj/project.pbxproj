@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		06026B3224E436F400967877 /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06026B3124E436F300967877 /* HostingController.swift */; };
+		0607A82124E56FC3002AED46 /* SignUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0607A82024E56FC3002AED46 /* SignUpScreen.swift */; };
+		0607A82324E57368002AED46 /* SignInScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0607A82224E57368002AED46 /* SignInScreen.swift */; };
 		065943A024E517A700973731 /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0659439F24E517A700973731 /* SettingsScreen.swift */; };
 		065943A224E519B800973731 /* SettingsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065943A124E519B800973731 /* SettingsItem.swift */; };
 		065943A524E51A9700973731 /* SettingsItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065943A424E51A9700973731 /* SettingsItemModel.swift */; };
@@ -34,6 +36,8 @@
 
 /* Begin PBXFileReference section */
 		06026B3124E436F300967877 /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
+		0607A82024E56FC3002AED46 /* SignUpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreen.swift; sourceTree = "<group>"; };
+		0607A82224E57368002AED46 /* SignInScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInScreen.swift; sourceTree = "<group>"; };
 		0659439F24E517A700973731 /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
 		065943A124E519B800973731 /* SettingsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItem.swift; sourceTree = "<group>"; };
 		065943A424E51A9700973731 /* SettingsItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItemModel.swift; sourceTree = "<group>"; };
@@ -146,6 +150,8 @@
 				06BAC5EF24E5089C00551E80 /* RatingsScreen.swift */,
 				0659439F24E517A700973731 /* SettingsScreen.swift */,
 				065943AA24E5296600973731 /* GameScreen.swift */,
+				0607A82024E56FC3002AED46 /* SignUpScreen.swift */,
+				0607A82224E57368002AED46 /* SignInScreen.swift */,
 			);
 			path = screens;
 			sourceTree = "<group>";
@@ -223,6 +229,8 @@
 			files = (
 				065943AF24E5302D00973731 /* MoneyButton.swift in Sources */,
 				068C83A524E41E4E00F5D1AF /* ScoresScreen.swift in Sources */,
+				0607A82124E56FC3002AED46 /* SignUpScreen.swift in Sources */,
+				0607A82324E57368002AED46 /* SignInScreen.swift in Sources */,
 				068C839D24E417CC00F5D1AF /* TopTabBar.swift in Sources */,
 				068C839624E3DD5E00F5D1AF /* HomeButton.swift in Sources */,
 				065943AD24E52CAC00973731 /* NewGameLink.swift in Sources */,
