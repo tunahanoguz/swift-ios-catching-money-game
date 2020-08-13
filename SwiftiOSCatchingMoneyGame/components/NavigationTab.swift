@@ -23,7 +23,7 @@ struct NavigationTab: View {
                     Text("Scores")
                 }
             
-            Text("The Last Tab")
+            RatingsScreen()
                 .tabItem {
                     Image(systemName: "rosette")
                     Text("Ratings")
