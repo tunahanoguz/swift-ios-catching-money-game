@@ -13,6 +13,7 @@
 		065943A524E51A9700973731 /* SettingsItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065943A424E51A9700973731 /* SettingsItemModel.swift */; };
 		065943A924E5266600973731 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065943A824E5266600973731 /* Color+Extension.swift */; };
 		065943AB24E5296600973731 /* GameScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065943AA24E5296600973731 /* GameScreen.swift */; };
+		065943AD24E52CAC00973731 /* NewGameLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065943AC24E52CAC00973731 /* NewGameLink.swift */; };
 		068C838024E3DB9F00F5D1AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068C837F24E3DB9F00F5D1AF /* AppDelegate.swift */; };
 		068C838224E3DB9F00F5D1AF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068C838124E3DB9F00F5D1AF /* SceneDelegate.swift */; };
 		068C838424E3DB9F00F5D1AF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068C838324E3DB9F00F5D1AF /* ContentView.swift */; };
@@ -37,6 +38,7 @@
 		065943A424E51A9700973731 /* SettingsItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItemModel.swift; sourceTree = "<group>"; };
 		065943A824E5266600973731 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		065943AA24E5296600973731 /* GameScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScreen.swift; sourceTree = "<group>"; };
+		065943AC24E52CAC00973731 /* NewGameLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGameLink.swift; sourceTree = "<group>"; };
 		068C837C24E3DB9F00F5D1AF /* SwiftiOSCatchingMoneyGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftiOSCatchingMoneyGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		068C837F24E3DB9F00F5D1AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		068C838124E3DB9F00F5D1AF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 		068C839424E3DD3700F5D1AF /* components */ = {
 			isa = PBXGroup;
 			children = (
+				065943AC24E52CAC00973731 /* NewGameLink.swift */,
 				068C839524E3DD5E00F5D1AF /* HomeButton.swift */,
 				068C839724E3E96C00F5D1AF /* NavigationTab.swift */,
 				068C839C24E417CB00F5D1AF /* TopTabBar.swift */,
@@ -218,6 +221,7 @@
 				068C83A524E41E4E00F5D1AF /* ScoresScreen.swift in Sources */,
 				068C839D24E417CC00F5D1AF /* TopTabBar.swift in Sources */,
 				068C839624E3DD5E00F5D1AF /* HomeButton.swift in Sources */,
+				065943AD24E52CAC00973731 /* NewGameLink.swift in Sources */,
 				065943A524E51A9700973731 /* SettingsItemModel.swift in Sources */,
 				068C83A324E41E0800F5D1AF /* OfflineScoresScreen.swift in Sources */,
 				06BAC5F024E5089C00551E80 /* RatingsScreen.swift in Sources */,
