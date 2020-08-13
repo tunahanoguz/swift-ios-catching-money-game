@@ -16,10 +16,10 @@ struct SettingsItem: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-//            Text(title)
-//            .font(.system(size: 18.0))
-//            .fontWeight(Font.Weight.semibold)
-//            .padding(.leading, 10.0)
+            Text(title)
+            .font(.system(size: 20.0))
+            .fontWeight(Font.Weight.semibold)
+            .padding(.leading, 10.0)
             
             ForEach(details.indices) { index in
                 VStack {
@@ -48,11 +48,10 @@ struct SettingsItem: View {
                     Rectangle()
                         .fill(Color(hex: "#DDDDDD"))
                         .frame(maxHeight: 0.6)
-                    
-//                    Divider()
                 }
             }
         }
+        .padding(.top, 10.0)
         .padding(.bottom, 20.0)
     }
 }
