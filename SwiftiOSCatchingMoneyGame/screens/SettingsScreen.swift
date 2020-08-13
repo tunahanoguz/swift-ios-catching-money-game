@@ -12,31 +12,39 @@ struct SettingsScreen: View {
     @State var gameType: Int = 0
     @State var gameLevel: Int = 2
     
+    var gameTypeDetails: [SettingsItemModel] = [
+        SettingsItemModel(title: "Online", description: "The scores obtained are recorded for competitive purposes. Requires internet."),
+        SettingsItemModel(title: "Offline", description: "The scores obtained are stored in local memory. No internet required."),
+    ]
+    
+    var gameLevelDetails: [SettingsItemModel] = [
+        SettingsItemModel(title: "Very Easy", description: "The location and type of coins change every three second."),
+        SettingsItemModel(title: "Easy", description: "The location and type of coins change every two second."),
+        SettingsItemModel(title: "Medium", description: "The location and type of coins change every one second."),
+        SettingsItemModel(title: "Hard", description: "The location and type of coins change every half second."),
+        SettingsItemModel(title: "Very Hard", description: "The location and type of coins change every quarter second."),
+    ]
+    
+    func setGameType(value: Int) {
+        self.gameType = value
+    }
+    
+    func setGameLevel(value: Int) {
+        self.gameLevel = value
+    }
+    
     var body: some View {
         NavigationView {
-            VStack {
-                Button(action: {}) {
-                    HStack {
-                        Text("Online")
-                        Spacer()
-                        Image(systemName: gameType == 0 ? "largecircle.fill.circle" : "circle")
-                    }
+            ScrollView {
+                VStack {
+                    SettingsItem(title: "Game Level", details: gameTypeDetails, state: gameType, setState: setGameType)
+                    
+                    SettingsItem(title: "Game Level", details: gameLevelDetails, state: gameLevel, setState: setGameLevel)
+                    
+                    Spacer()
                 }
-                .foregroundColor(Color.black)
-                
-                Button(action: {}) {
-                    HStack {
-                        Text("Offline")
-                        Spacer()
-                        Image(systemName: gameType == 0 ? "largecircle.fill.circle" : "circle")
-                    }
-                }
-                .foregroundColor(Color.black)
-                
-                Spacer()
+                .navigationBarTitle("Settings")
             }
-            .navigationBarTitle("Settings")
-            .padding(30.0)
         }
     }
 }
