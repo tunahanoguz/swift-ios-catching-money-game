@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		06026B3224E436F400967877 /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06026B3124E436F300967877 /* HostingController.swift */; };
+		065943A024E517A700973731 /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0659439F24E517A700973731 /* SettingsScreen.swift */; };
 		068C838024E3DB9F00F5D1AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068C837F24E3DB9F00F5D1AF /* AppDelegate.swift */; };
 		068C838224E3DB9F00F5D1AF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068C838124E3DB9F00F5D1AF /* SceneDelegate.swift */; };
 		068C838424E3DB9F00F5D1AF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068C838324E3DB9F00F5D1AF /* ContentView.swift */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		06026B3124E436F300967877 /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
+		0659439F24E517A700973731 /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
 		068C837C24E3DB9F00F5D1AF /* SwiftiOSCatchingMoneyGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftiOSCatchingMoneyGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		068C837F24E3DB9F00F5D1AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		068C838124E3DB9F00F5D1AF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				068C83A224E41E0800F5D1AF /* OfflineScoresScreen.swift */,
 				068C83A424E41E4E00F5D1AF /* ScoresScreen.swift */,
 				06BAC5EF24E5089C00551E80 /* RatingsScreen.swift */,
+				0659439F24E517A700973731 /* SettingsScreen.swift */,
 			);
 			path = screens;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				068C838024E3DB9F00F5D1AF /* AppDelegate.swift in Sources */,
 				068C839B24E3EAD400F5D1AF /* HomeScreen.swift in Sources */,
 				06026B3224E436F400967877 /* HostingController.swift in Sources */,
+				065943A024E517A700973731 /* SettingsScreen.swift in Sources */,
 				068C839824E3E96C00F5D1AF /* NavigationTab.swift in Sources */,
 				068C83A124E41B5E00F5D1AF /* ScoreItem.swift in Sources */,
 				068C838224E3DB9F00F5D1AF /* SceneDelegate.swift in Sources */,
