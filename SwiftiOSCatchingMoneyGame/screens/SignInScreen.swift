@@ -7,10 +7,28 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct SignInScreen: View {
+    @EnvironmentObject var session: SessionStore
+    
     @State var email: String = ""
     @State var password: String = ""
+    
+    @State var loading = false
+    @State var error = false
+    
+    func signIn() {
+        session.signIn(email: email, password: password) { (result, error) in
+            self.loading = false
+            if error != nil {
+                self.error = true
+            } else {
+                self.email = ""
+                self.password = ""
+            }
+        }
+    }
     
     var body: some View {
         NavigationView {
@@ -31,7 +49,7 @@ struct SignInScreen: View {
                     .font(.system(size: 16.0))
                     .cornerRadius(8.0)
                 
-                Button(action: {}) {
+                Button(action: signIn) {
                     Text("Sign In".uppercased())
                         .fontWeight(Font.Weight.semibold)
                         .foregroundColor(Color.white)
@@ -45,6 +63,9 @@ struct SignInScreen: View {
             }
             .navigationBarTitle("Sign In")
             .padding(18.0)
+        }
+        .alert(isPresented: $error) {
+            return Alert(title: Text("Failure!"), message: Text("You could not sign in!"), dismissButton: .default(Text("Retry!".uppercased())))
         }
     }
 }
