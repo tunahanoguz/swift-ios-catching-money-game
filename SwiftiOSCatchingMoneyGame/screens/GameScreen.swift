@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct GameScreen: View {
+    @EnvironmentObject var session: SessionStore
+    
     @State var moneyPlaceRandomNumber: Int = Int.random(in: 0..<12)
     @State var moneyTypeRandomNumber: Int = Int.random(in: 0..<8)
     var moneys: [String] = ["tl", "dolar", "euro", "pound", "gold", "bitcoin", "etherium", "dodge"]
@@ -25,6 +27,8 @@ struct GameScreen: View {
     @State var dodgeScore = 0
     @State var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     @State private var isShowedEndGameAlert = false
+    
+    var gameService: GameService = GameService()
     
     func increaseScore() {
         totalScore += 1
@@ -74,6 +78,10 @@ struct GameScreen: View {
         self.timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     }
     
+    func saveGame() {
+        gameService.saveOnlineGame(userID: self.session.userInfo!.id, score: ScoreModel(score: totalScore, tlScore: tlScore, dolarScore: dolarScore, euroScore: euroScore, poundScore: poundScore, goldScore: goldScore, bitcoinScore: bitcoinScore, etheriumScore: etheriumScore, dodgeScore: dodgeScore), gameType: self.session.userInfo!.gameType, gameLevel: self.session.userInfo!.gameLevel)
+    }
+    
     var body: some View {
         NavigationView {
             VStack() {
@@ -88,6 +96,7 @@ struct GameScreen: View {
                     } else {
                         self.timer.upstream.connect().cancel()
                         self.isShowedEndGameAlert = true
+                        self.saveGame()
                     }
                 }
                     
