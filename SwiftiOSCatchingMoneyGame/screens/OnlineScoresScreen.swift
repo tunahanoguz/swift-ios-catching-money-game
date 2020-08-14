@@ -18,12 +18,14 @@ struct OnlineScoresScreen: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10.0) {
-            List(games) { game in
-                ScoreItem(scoreID: "123asda", scoreType: 0, totalScore: 100, date: "2020 August, 12")
+            ForEach(games) { game in
+                ScoreItem(scoreID: game.id, scoreType: game.gameType, totalScore: game.scores.score, date: game.date)
             }
             
             Spacer()
         }
+        .padding(.top, 20.0)
+        .padding(.horizontal, 30.0)
         .onAppear() {
             self.gameService.getOnlineGames(setGames: self.setGames)
         }
