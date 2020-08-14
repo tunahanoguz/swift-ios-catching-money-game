@@ -8,10 +8,10 @@
 
 import Foundation
 
-struct User {
+struct UserModel {
+    var id: String
     var username: String
     var email: String
-    var createdAt: Date
     var gameType: Int
     var gameLevel: Int
 }
