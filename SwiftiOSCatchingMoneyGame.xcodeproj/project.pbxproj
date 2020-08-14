@@ -32,6 +32,8 @@
 		068C83A324E41E0800F5D1AF /* OfflineScoresScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068C83A224E41E0800F5D1AF /* OfflineScoresScreen.swift */; };
 		068C83A524E41E4E00F5D1AF /* ScoresScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068C83A424E41E4E00F5D1AF /* ScoresScreen.swift */; };
 		06BAC5F024E5089C00551E80 /* RatingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BAC5EF24E5089C00551E80 /* RatingsScreen.swift */; };
+		06BB3AD124E6650D00C6CEB9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 06BB3AD024E6650D00C6CEB9 /* GoogleService-Info.plist */; };
+		71DD554AF84CB44DB8991AA8 /* Pods_SwiftiOSCatchingMoneyGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76753874A22FD8F8AFCCFB72 /* Pods_SwiftiOSCatchingMoneyGame.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +64,10 @@
 		068C83A224E41E0800F5D1AF /* OfflineScoresScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineScoresScreen.swift; sourceTree = "<group>"; };
 		068C83A424E41E4E00F5D1AF /* ScoresScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresScreen.swift; sourceTree = "<group>"; };
 		06BAC5EF24E5089C00551E80 /* RatingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingsScreen.swift; sourceTree = "<group>"; };
+		06BB3AD024E6650D00C6CEB9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		17B73D14C5A7A76D3DD7D5D6 /* Pods-SwiftiOSCatchingMoneyGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftiOSCatchingMoneyGame.debug.xcconfig"; path = "Target Support Files/Pods-SwiftiOSCatchingMoneyGame/Pods-SwiftiOSCatchingMoneyGame.debug.xcconfig"; sourceTree = "<group>"; };
+		76753874A22FD8F8AFCCFB72 /* Pods_SwiftiOSCatchingMoneyGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftiOSCatchingMoneyGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDE059982FA897A132B164FA /* Pods-SwiftiOSCatchingMoneyGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftiOSCatchingMoneyGame.release.xcconfig"; path = "Target Support Files/Pods-SwiftiOSCatchingMoneyGame/Pods-SwiftiOSCatchingMoneyGame.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71DD554AF84CB44DB8991AA8 /* Pods_SwiftiOSCatchingMoneyGame.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +95,8 @@
 			children = (
 				068C837E24E3DB9F00F5D1AF /* SwiftiOSCatchingMoneyGame */,
 				068C837D24E3DB9F00F5D1AF /* Products */,
+				1BE6BC8813F2B99A871B2E73 /* Pods */,
+				F058E02B9B7D9F6E1FD5365B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +121,7 @@
 				068C838524E3DBA000F5D1AF /* Assets.xcassets */,
 				068C838A24E3DBA000F5D1AF /* LaunchScreen.storyboard */,
 				068C838D24E3DBA000F5D1AF /* Info.plist */,
+				06BB3AD024E6650D00C6CEB9 /* GoogleService-Info.plist */,
 				068C838724E3DBA000F5D1AF /* Preview Content */,
 				065943A824E5266600973731 /* Color+Extension.swift */,
 			);
@@ -156,6 +166,24 @@
 			path = screens;
 			sourceTree = "<group>";
 		};
+		1BE6BC8813F2B99A871B2E73 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				17B73D14C5A7A76D3DD7D5D6 /* Pods-SwiftiOSCatchingMoneyGame.debug.xcconfig */,
+				BDE059982FA897A132B164FA /* Pods-SwiftiOSCatchingMoneyGame.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F058E02B9B7D9F6E1FD5365B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				76753874A22FD8F8AFCCFB72 /* Pods_SwiftiOSCatchingMoneyGame.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -163,9 +191,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 068C839024E3DBA000F5D1AF /* Build configuration list for PBXNativeTarget "SwiftiOSCatchingMoneyGame" */;
 			buildPhases = (
+				C33ACC3CFF63D7583E2123EB /* [CP] Check Pods Manifest.lock */,
 				068C837824E3DB9F00F5D1AF /* Sources */,
 				068C837924E3DB9F00F5D1AF /* Frameworks */,
 				068C837A24E3DB9F00F5D1AF /* Resources */,
+				F0C00CD4A4C7D097D8BDBD6B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -215,12 +245,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				068C838C24E3DBA000F5D1AF /* LaunchScreen.storyboard in Resources */,
+				06BB3AD124E6650D00C6CEB9 /* GoogleService-Info.plist in Resources */,
 				068C838924E3DBA000F5D1AF /* Preview Assets.xcassets in Resources */,
 				068C838624E3DBA000F5D1AF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C33ACC3CFF63D7583E2123EB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftiOSCatchingMoneyGame-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0C00CD4A4C7D097D8BDBD6B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftiOSCatchingMoneyGame/Pods-SwiftiOSCatchingMoneyGame-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftiOSCatchingMoneyGame/Pods-SwiftiOSCatchingMoneyGame-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftiOSCatchingMoneyGame/Pods-SwiftiOSCatchingMoneyGame-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		068C837824E3DB9F00F5D1AF /* Sources */ = {
@@ -382,6 +455,7 @@
 		};
 		068C839124E3DBA000F5D1AF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17B73D14C5A7A76D3DD7D5D6 /* Pods-SwiftiOSCatchingMoneyGame.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -401,6 +475,7 @@
 		};
 		068C839224E3DBA000F5D1AF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDE059982FA897A132B164FA /* Pods-SwiftiOSCatchingMoneyGame.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
