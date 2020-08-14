@@ -9,21 +9,24 @@
 import SwiftUI
 
 struct OnlineScoresScreen: View {
+    var gameService: GameService = GameService()
+    @State var games: [GameModel] = []
+    
+    func setGames(innerGames: [GameModel]) {
+        games = innerGames
+    }
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 10.0) {
-            ScoreItem(scoreID: "123asda", scoreType: 0, totalScore: 100, date: "2020 August, 12")
-            
-            ScoreItem(scoreID: "123asda", scoreType: 0, totalScore: 100, date: "2020 August, 12")
-            
-            ScoreItem(scoreID: "123asda", scoreType: 0, totalScore: 100, date: "2020 August, 12")
-            
-            ScoreItem(scoreID: "123asda", scoreType: 0, totalScore: 100, date: "2020 August, 12")
-            
-            ScoreItem(scoreID: "123asda", scoreType: 0, totalScore: 100, date: "2020 August, 12")
+            List(games) { game in
+                ScoreItem(scoreID: "123asda", scoreType: 0, totalScore: 100, date: "2020 August, 12")
+            }
             
             Spacer()
         }
-        .padding(.horizontal, 30.0)
+        .onAppear() {
+            self.gameService.getOnlineGames(setGames: self.setGames)
+        }
     }
 }
 
