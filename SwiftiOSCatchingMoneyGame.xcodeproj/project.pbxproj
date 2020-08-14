@@ -10,6 +10,7 @@
 		06026B3224E436F400967877 /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06026B3124E436F300967877 /* HostingController.swift */; };
 		0607A82124E56FC3002AED46 /* SignUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0607A82024E56FC3002AED46 /* SignUpScreen.swift */; };
 		0607A82324E57368002AED46 /* SignInScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0607A82224E57368002AED46 /* SignInScreen.swift */; };
+		0627CDE524E6816300E17BCD /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0627CDE424E6816300E17BCD /* SessionStore.swift */; };
 		065943A024E517A700973731 /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0659439F24E517A700973731 /* SettingsScreen.swift */; };
 		065943A224E519B800973731 /* SettingsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065943A124E519B800973731 /* SettingsItem.swift */; };
 		065943A524E51A9700973731 /* SettingsItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065943A424E51A9700973731 /* SettingsItemModel.swift */; };
@@ -41,6 +42,7 @@
 		06026B3124E436F300967877 /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
 		0607A82024E56FC3002AED46 /* SignUpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreen.swift; sourceTree = "<group>"; };
 		0607A82224E57368002AED46 /* SignInScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInScreen.swift; sourceTree = "<group>"; };
+		0627CDE424E6816300E17BCD /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
 		0659439F24E517A700973731 /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
 		065943A124E519B800973731 /* SettingsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItem.swift; sourceTree = "<group>"; };
 		065943A424E51A9700973731 /* SettingsItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItemModel.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				06BB3AD024E6650D00C6CEB9 /* GoogleService-Info.plist */,
 				068C838724E3DBA000F5D1AF /* Preview Content */,
 				065943A824E5266600973731 /* Color+Extension.swift */,
+				0627CDE424E6816300E17BCD /* SessionStore.swift */,
 			);
 			path = SwiftiOSCatchingMoneyGame;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				068C838024E3DB9F00F5D1AF /* AppDelegate.swift in Sources */,
 				068C839B24E3EAD400F5D1AF /* HomeScreen.swift in Sources */,
 				06026B3224E436F400967877 /* HostingController.swift in Sources */,
+				0627CDE524E6816300E17BCD /* SessionStore.swift in Sources */,
 				065943A024E517A700973731 /* SettingsScreen.swift in Sources */,
 				068C839824E3E96C00F5D1AF /* NavigationTab.swift in Sources */,
 				068C83A124E41B5E00F5D1AF /* ScoreItem.swift in Sources */,
