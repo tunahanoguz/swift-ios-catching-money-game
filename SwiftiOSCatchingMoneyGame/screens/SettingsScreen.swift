@@ -7,10 +7,16 @@
 //
 
 import SwiftUI
+import FirebaseFirestore
 
 struct SettingsScreen: View {
+    @EnvironmentObject var session: SessionStore
+    
     @State var gameType: Int = 0
     @State var gameLevel: Int = 2
+    
+    @State var isUpdated: Bool = false
+    @State var isErrorExist: Bool = false
     
     var gameTypeDetails: [SettingsItemModel] = [
         SettingsItemModel(title: "Online", description: "The scores obtained are recorded for competitive purposes. Requires internet."),
@@ -33,18 +39,66 @@ struct SettingsScreen: View {
         self.gameLevel = value
     }
     
+    func saveSettings() {
+        let firestore = Firestore.firestore()
+        let userCollection = firestore.collection("Users")
+        var documentID: String = ""
+        
+        userCollection
+        .whereField("id", isEqualTo: session.userInfo!.id)
+            .getDocuments { (querySnapshot, error) in
+                if error == nil {
+                    let userDoc = querySnapshot?.documents[0]
+                    documentID = userDoc?.documentID as! String
+                    
+                    userCollection
+                    .document(documentID)
+                    .updateData([
+                        "gameType": self.gameType,
+                        "gameLevel": self.gameLevel,
+                    ]) { (error) in
+                        if error == nil {
+                            self.isUpdated = true
+                        } else {
+                            self.isErrorExist = true
+                        }
+                    }
+                }
+        }
+    }
+    
     var body: some View {
         NavigationView {
             ScrollView {
                 VStack {
-                    SettingsItem(title: "Game Level", details: gameTypeDetails, state: gameType, setState: setGameType)
+                    SettingsItem(title: "Game Level", details: gameTypeDetails, state: self.gameType, setState: setGameType)
                     
-                    SettingsItem(title: "Game Level", details: gameLevelDetails, state: gameLevel, setState: setGameLevel)
+                    SettingsItem(title: "Game Level", details: gameLevelDetails, state: self.gameLevel, setState: setGameLevel)
+                    
+                    Button(action: saveSettings) {
+                        Text("Save".uppercased())
+                        .fontWeight(Font.Weight.semibold)
+                    }
+                    .padding(.vertical, 10.0)
+                    .padding(.horizontal, 20.0)
+                    .background(Color.blue)
+                    .foregroundColor(Color.white)
+                    .cornerRadius(8.0)
                     
                     Spacer()
                 }
+                .alert(isPresented: $isUpdated) {
+                    return Alert(title: Text("Updated!"), message: Text("You could update!"), dismissButton: .default(Text("OK!")))
+                }
+                .alert(isPresented: $isErrorExist) {
+                    return Alert(title: Text("Failure!"), message: Text("You could not update"), dismissButton: .default(Text("Retry!".uppercased())))
+                }
                 .navigationBarTitle("Settings")
             }
+        }
+        .onAppear() {
+            self.gameType = self.session.userInfo?.gameType as! Int
+            self.gameLevel = self.session.userInfo?.gameLevel as! Int
         }
     }
 }
