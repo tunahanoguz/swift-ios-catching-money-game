@@ -49,7 +49,7 @@ class GameService {
                 
                 let scores = ScoreModel(score: scoresData["score"]!, tlScore: scoresData["tlScore"]!, dolarScore: scoresData["dolarScore"]!, euroScore: scoresData["euroScore"]!, poundScore: scoresData["poundScore"]!, goldScore: scoresData["goldScore"]!, bitcoinScore: scoresData["bitcoinScore"]!, etheriumScore: scoresData["etheriumScore"]!, dodgeScore: scoresData["dodgeScore"]!)
 
-                let game = GameModel(userID: data["userID"] as! String, scores: scores, gameType: data["gameType"] as! Int, gameLevel: data["gameLevel"] as! Int, date: self.convertFsDateToString(stamp: data["date"] ?? "") )
+                let game = GameModel(id: document.documentID, userID: data["userID"] as! String, scores: scores, gameType: data["gameType"] as! Int, gameLevel: data["gameLevel"] as! Int, date: self.convertFsDateToString(stamp: data["date"] ?? "") )
 
                 innerGames.append(game)
             }
@@ -62,7 +62,7 @@ class GameService {
         let ts = stamp as! Timestamp
         let aDate = ts.dateValue()
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss ZZZ"
+        formatter.dateFormat = "yyyy-MM-dd"
         let formattedTimeZoneStr = formatter.string(from: aDate)
         return formattedTimeZoneStr
     }
