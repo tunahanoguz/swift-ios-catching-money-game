@@ -7,11 +7,40 @@
 //
 
 import SwiftUI
+import FirebaseAuth
+import FirebaseFirestore
 
 struct SignUpScreen: View {
     @State var username: String = ""
     @State var email: String = ""
     @State var password: String = ""
+    
+    @State var isErrorExist: Bool = false
+    
+    func signUp() {
+        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+            if error == nil {
+                let userID = authResult?.user.uid
+                let db = Firestore.firestore()
+                let userCollection = db.collection("Users")
+                
+                userCollection.addDocument(data: [
+                    "id": userID!,
+                    "username": self.username,
+                    "email": self.email,
+                    "createdAt": Date(),
+                    "gameType": 0,
+                    "gameLevel": 2,
+                    ], completion: { (error) in
+                        if error != nil {
+                            self.isErrorExist = true
+                        }
+                })
+            } else {
+                self.isErrorExist = true
+            }
+        }
+    }
     
     var body: some View {
         NavigationView {
@@ -39,7 +68,7 @@ struct SignUpScreen: View {
                     .font(.system(size: 16.0))
                     .cornerRadius(8.0)
                 
-                Button(action: {}) {
+                Button(action: signUp) {
                     Text("Sign Up".uppercased())
                         .fontWeight(Font.Weight.semibold)
                         .foregroundColor(Color.white)
@@ -53,6 +82,9 @@ struct SignUpScreen: View {
             }
             .navigationBarTitle("Sign Up")
             .padding(18.0)
+            .alert(isPresented: $isErrorExist) {
+                return Alert(title: Text("Failure!"), message: Text("You could not sign up!"), dismissButton: .default(Text("Retry!".uppercased())))
+            }
         }
     }
 }
