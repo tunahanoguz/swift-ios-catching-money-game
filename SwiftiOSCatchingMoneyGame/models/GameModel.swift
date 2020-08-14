@@ -9,7 +9,7 @@
 import Foundation
 
 struct GameModel: Identifiable {
-    var id: UUID = UUID()
+    var id: String
     var userID: String
     var scores: ScoreModel
     var gameType: Int
