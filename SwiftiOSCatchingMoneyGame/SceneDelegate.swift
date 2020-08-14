@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftUI
+import FirebaseAuth
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -25,7 +26,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = HostingController(rootView: contentView)
+            window.rootViewController = HostingController(rootView: contentView.environmentObject(SessionStore()))
             self.window = window
             window.makeKeyAndVisible()
         }
