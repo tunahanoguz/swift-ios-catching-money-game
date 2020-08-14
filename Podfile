@@ -7,8 +7,11 @@ target 'SwiftiOSCatchingMoneyGame' do
 
   # Pods for SwiftiOSCatchingMoneyGame
 
+use_frameworks!
+
 pod 'Firebase/Analytics'
 pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
+pod 'RealmSwift'
 
 end
