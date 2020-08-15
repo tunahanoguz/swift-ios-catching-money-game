@@ -58,6 +58,24 @@ class GameService {
         }
     }
     
+    func getSingleGame(scoreID: String, setGame: @escaping (GameModel) -> Void) {
+        let firestore = Firestore.firestore()
+        let scoreCollection = firestore.collection("Scores")
+        
+        scoreCollection.document(scoreID).addSnapshotListener { (documentSnapshot, error) in
+            if error == nil {
+                let data = documentSnapshot?.data()
+                let scoresData = data?["scores"] as! [String: Int]
+                
+                let scores = ScoreModel(score: scoresData["score"]!, tlScore: scoresData["tlScore"]!, dolarScore: scoresData["dolarScore"]!, euroScore: scoresData["euroScore"]!, poundScore: scoresData["poundScore"]!, goldScore: scoresData["goldScore"]!, bitcoinScore: scoresData["bitcoinScore"]!, etheriumScore: scoresData["etheriumScore"]!, dodgeScore: scoresData["dodgeScore"]!)
+                
+                let game = GameModel(id: documentSnapshot?.documentID ?? "documentID", userID: data?["userID"] as! String, scores: scores, gameType: data?["gameType"] as! Int, gameLevel: data?["gameLevel"] as! Int, date: self.convertFsDateToString(stamp: data?["date"] ?? ""))
+                
+                setGame(game)
+            }
+        }
+    }
+    
     func convertFsDateToString(stamp: Any) -> String {
         let ts = stamp as! Timestamp
         let aDate = ts.dateValue()
