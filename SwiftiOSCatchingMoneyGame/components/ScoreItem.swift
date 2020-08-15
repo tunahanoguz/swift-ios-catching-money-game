@@ -15,17 +15,15 @@ struct ScoreItem: View {
     var date: String
     
     var body: some View {
-        Button(action: {
-            print("Go to score detail screen!")
-        }) {
+        NavigationLink(destination: ScoreDetailScreen(scoreID: scoreID)) {
             HStack {
                 VStack {
                     Text("Total Score")
-                        .font(.system(size: 14.0))
+                    .font(.system(size: 14.0))
                     
                     Text(String(totalScore))
                     .font(.system(size: 22.0))
-                        .fontWeight(Font.Weight.semibold)
+                    .fontWeight(Font.Weight.semibold)
                 }
                 
                 Spacer()
