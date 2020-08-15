@@ -43,9 +43,9 @@ struct RatingDetailScreen: View {
     }
     
     var body: some View {
-        NavigationView {
-            VStack {
-                if self.game.id != nil {
+        VStack {
+            if self.game.id != nil {
+                VStack {
                     VStack {
                         ScoreDetailItem(scoreTitle: "Game Date", scoreDescription: game.date!)
                         
@@ -73,14 +73,18 @@ struct RatingDetailScreen: View {
                         
                         ScoreDetailItem(scoreTitle: "Dodge Score", scoreDescription: String(game.scores!.dodgeScore))
                     }
-                } else {
-                    Text("Rating detail is loading...")
                 }
-                
-                Spacer()
+                .padding(.horizontal, 18.0)
+            } else {
+                Text("Rating detail is loading...")
             }
-            .navigationBarTitle("Rating Detail")
-            .navigationBarHidden(false)
+            
+            Spacer()
+        }
+        .navigationBarTitle("Rating Detail")
+        .navigationBarHidden(false)
+        .onAppear() {
+            self.gameService.getSingleGame(scoreID: self.scoreID, setGame: self.setGame)
         }
     }
 }
