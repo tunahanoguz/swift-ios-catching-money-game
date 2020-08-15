@@ -12,12 +12,18 @@ struct ScoreDetailItem: View {
     var scoreDescription: String
     
     var body: some View {
-        HStack {
-            Text(scoreTitle)
+        VStack {
+            HStack {
+                Text(scoreTitle)
+                .font(.system(size: 14.0))
+                
+                Spacer()
+                
+                Text(scoreDescription)
+                .font(.system(size: 14.0))
+            }
             
-            Spacer()
-            
-            Text(scoreDescription)
+            Divider()
         }
     }
 }
