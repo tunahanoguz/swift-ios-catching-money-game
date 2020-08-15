@@ -9,10 +9,10 @@
 import Foundation
 
 struct GameModel: Identifiable {
-    var id: String
-    var userID: String
-    var scores: ScoreModel
-    var gameType: Int
-    var gameLevel: Int
-    var date: String
+    var id: String?
+    var userID: String?
+    var scores: ScoreModel?
+    var gameType: Int?
+    var gameLevel: Int?
+    var date: String?
 }
