@@ -10,7 +10,9 @@ import SwiftUI
 
 struct OnlineScoresScreen: View {
     @EnvironmentObject var topBarService: TopBarService
+    @EnvironmentObject var session: SessionStore
     var gameService: GameService = GameService()
+    
     @State var games: [GameModel] = []
     
     func setGames(innerGames: [GameModel]) {
@@ -28,7 +30,7 @@ struct OnlineScoresScreen: View {
         .padding(.top, self.topBarService.isShowedNavigationBar ? 20.0 : 0)
         .padding(.horizontal, 30.0)
         .onAppear() {
-            self.gameService.getOnlineGames(setGames: self.setGames)
+            self.gameService.getOnlineGamesByUserID(userID: self.session.userInfo!.id, setGames: self.setGames)
             
             self.topBarService.showNavigationBar()
         }
