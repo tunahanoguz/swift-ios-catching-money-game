@@ -27,7 +27,7 @@ struct RatingsScreen: View {
         NavigationView {
             VStack(alignment: .leading, spacing: 10.0) {
                 ForEach(self.ratings) {rating in
-                    ScoreItem(scoreID: rating.id!, scoreType: rating.gameType!, totalScore: rating.scores!.score, date: rating.date!)
+                    RatingItem(scoreID: rating.id!, scoreType: rating.gameType!, totalScore: rating.scores!.score, date: rating.date!)
                 }
                 
                 Button(action: printSomething) {
@@ -42,7 +42,7 @@ struct RatingsScreen: View {
                 
                 Spacer()
             }
-            .padding(.horizontal, 30.0)
+            .padding(.horizontal, 18.0)
             .navigationBarTitle("Ratings")
             .onAppear() {
                 self.gameService.getGamesWithUsername(userID: self.session.userInfo!.id, setGames: self.setGames)
