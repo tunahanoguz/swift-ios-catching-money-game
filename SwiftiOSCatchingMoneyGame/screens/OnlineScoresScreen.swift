@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct OnlineScoresScreen: View {
+    @EnvironmentObject var topBarService: TopBarService
     var gameService: GameService = GameService()
     @State var games: [GameModel] = []
     
@@ -19,16 +20,20 @@ struct OnlineScoresScreen: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 10.0) {
             ForEach(games) { game in
-                ScoreItem(scoreID: game.id, scoreType: game.gameType, totalScore: game.scores.score, date: game.date)
+                ScoreItem(scoreID: game.id!, scoreType: game.gameType!, totalScore: (game.scores?.score)!, date: game.date!)
             }
             
             Spacer()
         }
-        .padding(.top, 20.0)
+        .padding(.top, self.topBarService.isShowedNavigationBar ? 20.0 : 0)
         .padding(.horizontal, 30.0)
         .onAppear() {
             self.gameService.getOnlineGames(setGames: self.setGames)
+            
+            self.topBarService.showNavigationBar()
         }
+        .navigationBarTitle("")
+        .navigationBarHidden(self.topBarService.isShowedNavigationBar)
     }
 }
 
