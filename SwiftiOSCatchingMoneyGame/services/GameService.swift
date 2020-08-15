@@ -42,7 +42,9 @@ class GameService {
         let firestore = Firestore.firestore()
         let scoreCollection = firestore.collection("Scores")
         
-        scoreCollection.getDocuments { (querySnapshot, error) in
+        scoreCollection
+        .order(by: "date", descending: true)
+        .getDocuments { (querySnapshot, error) in
             for document in querySnapshot!.documents {
                 let data = document.data()
                 let scoresData = data["scores"] as! [String: Int]
@@ -73,6 +75,47 @@ class GameService {
                 
                 setGame(game)
             }
+        }
+    }
+    
+    func getGamesWithUsername(userID: String, setGames: @escaping ([RatingModel]) -> Void) {
+        var fetchedGames: [RatingModel] = []
+        let firestore = Firestore.firestore()
+        let scoreCollection = firestore.collection("Scores")
+        let userCollection = firestore.collection("Users")
+        
+        scoreCollection
+        .order(by: "scores.score", descending: true)
+        .limit(to: 5)
+            .addSnapshotListener { (querySnapshot, error) in
+                if error == nil {
+                    let gameDocs = querySnapshot!.documents
+                    
+                    userCollection
+                    .whereField("id", isEqualTo: userID)
+                    .getDocuments { (querySnapshot, error) in
+                        if error == nil {
+                            let userDoc = querySnapshot?.documents[0]
+                            let userData = userDoc?.data()
+                            let username = userData?["username"]
+                            
+                            for document in gameDocs {
+                                let data = document.data()
+                                let scoresData = data["scores"] as! [String: Int]
+                                
+                                print(data)
+                                
+                                let scores = ScoreModel(score: scoresData["score"]!, tlScore: scoresData["tlScore"]!, dolarScore: scoresData["dolarScore"]!, euroScore: scoresData["euroScore"]!, poundScore: scoresData["poundScore"]!, goldScore: scoresData["goldScore"]!, bitcoinScore: scoresData["bitcoinScore"]!, etheriumScore: scoresData["etheriumScore"]!, dodgeScore: scoresData["dodgeScore"]!)
+
+                                let game = RatingModel(id: document.documentID, username: username as! String, scores: scores, gameType: data["gameType"] as! Int, gameLevel: data["gameLevel"] as! Int, date: self.convertFsDateToString(stamp: data["date"] ?? ""))
+                                
+                                fetchedGames.append(game)
+                            }
+                            
+                            setGames(fetchedGames)
+                        }
+                    }
+                }
         }
     }
     
