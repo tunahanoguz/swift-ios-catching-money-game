@@ -60,6 +60,32 @@ class GameService {
         }
     }
     
+    func getOnlineGamesByUserID(userID: String, setGames: @escaping ([GameModel]) -> Void) {
+        var innerGames: [GameModel] = []
+        let firestore = Firestore.firestore()
+        let scoreCollection = firestore.collection("Scores")
+        
+        scoreCollection
+        .whereField("userID", isEqualTo: userID)
+        .order(by: "date", descending: true)
+        .getDocuments { (querySnapshot, error) in
+            if error == nil {
+                for document in querySnapshot!.documents {
+                    let data = document.data()
+                    let scoresData = data["scores"] as! [String: Int]
+                    
+                    let scores = ScoreModel(score: scoresData["score"]!, tlScore: scoresData["tlScore"]!, dolarScore: scoresData["dolarScore"]!, euroScore: scoresData["euroScore"]!, poundScore: scoresData["poundScore"]!, goldScore: scoresData["goldScore"]!, bitcoinScore: scoresData["bitcoinScore"]!, etheriumScore: scoresData["etheriumScore"]!, dodgeScore: scoresData["dodgeScore"]!)
+
+                    let game = GameModel(id: document.documentID, userID: data["userID"] as! String, scores: scores, gameType: data["gameType"] as! Int, gameLevel: data["gameLevel"] as! Int, date: self.convertFsDateToString(stamp: data["date"] ?? "") )
+
+                    innerGames.append(game)
+                }
+                
+                setGames(innerGames)
+            }
+        }
+    }
+    
     func getSingleGame(scoreID: String, setGame: @escaping (GameModel) -> Void) {
         let firestore = Firestore.firestore()
         let scoreCollection = firestore.collection("Scores")
