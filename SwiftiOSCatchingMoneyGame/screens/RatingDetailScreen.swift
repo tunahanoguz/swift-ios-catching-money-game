@@ -45,33 +45,39 @@ struct RatingDetailScreen: View {
     var body: some View {
         NavigationView {
             VStack {
-                VStack {
-                    ScoreDetailItem(scoreTitle: "Game Date", scoreDescription: game.date!)
+                if self.game.id != nil {
+                    VStack {
+                        ScoreDetailItem(scoreTitle: "Game Date", scoreDescription: game.date!)
+                        
+                        ScoreDetailItem(scoreTitle: "Game Type", scoreDescription: trimGameType())
+                        
+                        ScoreDetailItem(scoreTitle: "Game Level", scoreDescription: trimGameLevel())
+                        
+                        ScoreDetailItem(scoreTitle: "Total Score", scoreDescription: String(game.scores!.score))
+                        
+                        ScoreDetailItem(scoreTitle: "TL Score", scoreDescription: String(game.scores!.tlScore))
+                        
+                        ScoreDetailItem(scoreTitle: "Dolar Score", scoreDescription: String(game.scores!.dolarScore))
+                    }
                     
-                    ScoreDetailItem(scoreTitle: "Game Type", scoreDescription: trimGameType())
-                    
-                    ScoreDetailItem(scoreTitle: "Game Level", scoreDescription: trimGameLevel())
-                    
-                    ScoreDetailItem(scoreTitle: "Total Score", scoreDescription: String(game.scores!.score))
-                    
-                    ScoreDetailItem(scoreTitle: "TL Score", scoreDescription: String(game.scores!.tlScore))
-                    
-                    ScoreDetailItem(scoreTitle: "Dolar Score", scoreDescription: String(game.scores!.dolarScore))
+                    VStack {
+                        ScoreDetailItem(scoreTitle: "Euro Score", scoreDescription: String(game.scores!.euroScore))
+                        
+                        ScoreDetailItem(scoreTitle: "Pound Score", scoreDescription: String(game.scores!.poundScore))
+                        
+                        ScoreDetailItem(scoreTitle: "Gold Score", scoreDescription: String(game.scores!.goldScore))
+                        
+                        ScoreDetailItem(scoreTitle: "Bitcoin Score", scoreDescription: String(game.scores!.bitcoinScore))
+                        
+                        ScoreDetailItem(scoreTitle: "Etherium Score", scoreDescription: String(game.scores!.etheriumScore))
+                        
+                        ScoreDetailItem(scoreTitle: "Dodge Score", scoreDescription: String(game.scores!.dodgeScore))
+                    }
+                } else {
+                    Text("Rating detail is loading...")
                 }
                 
-                VStack {
-                    ScoreDetailItem(scoreTitle: "Euro Score", scoreDescription: String(game.scores!.euroScore))
-                    
-                    ScoreDetailItem(scoreTitle: "Pound Score", scoreDescription: String(game.scores!.poundScore))
-                    
-                    ScoreDetailItem(scoreTitle: "Gold Score", scoreDescription: String(game.scores!.goldScore))
-                    
-                    ScoreDetailItem(scoreTitle: "Bitcoin Score", scoreDescription: String(game.scores!.bitcoinScore))
-                    
-                    ScoreDetailItem(scoreTitle: "Etherium Score", scoreDescription: String(game.scores!.etheriumScore))
-                    
-                    ScoreDetailItem(scoreTitle: "Dodge Score", scoreDescription: String(game.scores!.dodgeScore))
-                }
+                Spacer()
             }
             .navigationBarTitle("Rating Detail")
             .navigationBarHidden(false)
