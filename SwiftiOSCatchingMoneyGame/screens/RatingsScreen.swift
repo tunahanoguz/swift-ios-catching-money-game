@@ -9,6 +9,16 @@
 import SwiftUI
 
 struct RatingsScreen: View {
+    @EnvironmentObject var session: SessionStore
+    
+    var gameService: GameService = GameService()
+    
+    @State var ratings: [RatingModel] = []
+    
+    func setGames(fetchedRatings: [RatingModel]) {
+        ratings = fetchedRatings
+    }
+    
     func printSomething() {
         print("Print something.")
     }
@@ -16,13 +26,9 @@ struct RatingsScreen: View {
     var body: some View {
         NavigationView {
             VStack(alignment: .leading, spacing: 10.0) {
-                ScoreItem(scoreID: "123asda", scoreType: 0, totalScore: 100, date: "2020 August, 12")
-                
-                ScoreItem(scoreID: "123asda", scoreType: 0, totalScore: 100, date: "2020 August, 12")
-                
-                ScoreItem(scoreID: "123asda", scoreType: 0, totalScore: 100, date: "2020 August, 12")
-                
-                ScoreItem(scoreID: "123asda", scoreType: 0, totalScore: 100, date: "2020 August, 12")
+                ForEach(self.ratings) {rating in
+                    ScoreItem(scoreID: rating.id!, scoreType: rating.gameType!, totalScore: rating.scores!.score, date: rating.date!)
+                }
                 
                 Button(action: printSomething) {
                     Text("See All".uppercased())
@@ -37,7 +43,10 @@ struct RatingsScreen: View {
                 Spacer()
             }
             .padding(.horizontal, 30.0)
-        .navigationBarTitle("Ratings")
+            .navigationBarTitle("Ratings")
+            .onAppear() {
+                self.gameService.getGamesWithUsername(userID: self.session.userInfo!.id, setGames: self.setGames)
+            }
         }
     }
 }
