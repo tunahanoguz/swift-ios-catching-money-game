@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:ScoreDetailItem.swift">
+      location = "group:/Users/tunahanoguz/projects/frontend/mobile/swiftui/SwiftiOSCatchingMoneyGame/SwiftiOSCatchingMoneyGame/components/ScoreDetailItem.swift">
    </FileRef>
    <FileRef
       location = "group:SwiftiOSCatchingMoneyGame.xcodeproj">
