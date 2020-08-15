@@ -1,6 +1,6 @@
 //
 //  ScoreDetailItem.swift
-//  
+//
 //
 //  Created by Tunahan Oğuz on 15.08.2020.
 //

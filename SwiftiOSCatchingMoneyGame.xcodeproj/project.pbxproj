@@ -13,6 +13,7 @@
 		061A9E0F24E7A91B00855009 /* ScoreDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061A9E0E24E7A91B00855009 /* ScoreDetailScreen.swift */; };
 		061A9E1124E7AA8700855009 /* ScoreDetailItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061A9E1024E7AA8700855009 /* ScoreDetailItem.swift */; };
 		061A9E1324E7C41C00855009 /* TopBarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061A9E1224E7C41C00855009 /* TopBarService.swift */; };
+		061A9E1524E7DB3B00855009 /* ScoreDetailItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061A9E1424E7DB3B00855009 /* ScoreDetailItem.swift */; };
 		0627CDE524E6816300E17BCD /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0627CDE424E6816300E17BCD /* SessionStore.swift */; };
 		0627CDE724E6852000E17BCD /* ScoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0627CDE624E6852000E17BCD /* ScoreModel.swift */; };
 		0627CDE924E6858C00E17BCD /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0627CDE824E6858C00E17BCD /* GameModel.swift */; };
@@ -51,6 +52,7 @@
 		061A9E0E24E7A91B00855009 /* ScoreDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreDetailScreen.swift; sourceTree = "<group>"; };
 		061A9E1024E7AA8700855009 /* ScoreDetailItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScoreDetailItem.swift; path = /Users/tunahanoguz/projects/frontend/mobile/swiftui/SwiftiOSCatchingMoneyGame/SwiftiOSCatchingMoneyGame/components/ScoreDetailItem.swift; sourceTree = "<absolute>"; };
 		061A9E1224E7C41C00855009 /* TopBarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarService.swift; sourceTree = "<group>"; };
+		061A9E1424E7DB3B00855009 /* ScoreDetailItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreDetailItem.swift; sourceTree = "<group>"; };
 		0627CDE424E6816300E17BCD /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
 		0627CDE624E6852000E17BCD /* ScoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreModel.swift; sourceTree = "<group>"; };
 		0627CDE824E6858C00E17BCD /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				068C83A024E41B5E00F5D1AF /* ScoreItem.swift */,
 				065943A124E519B800973731 /* SettingsItem.swift */,
 				065943AE24E5302D00973731 /* MoneyButton.swift */,
+				061A9E1424E7DB3B00855009 /* ScoreDetailItem.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 				065943A924E5266600973731 /* Color+Extension.swift in Sources */,
 				068C838424E3DB9F00F5D1AF /* ContentView.swift in Sources */,
 				068C839F24E41A1F00F5D1AF /* OnlineScoresScreen.swift in Sources */,
+				061A9E1524E7DB3B00855009 /* ScoreDetailItem.swift in Sources */,
 				065943A224E519B800973731 /* SettingsItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
