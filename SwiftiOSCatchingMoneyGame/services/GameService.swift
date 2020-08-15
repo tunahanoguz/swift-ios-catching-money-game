@@ -103,8 +103,6 @@ class GameService {
                                 let data = document.data()
                                 let scoresData = data["scores"] as! [String: Int]
                                 
-                                print(data)
-                                
                                 let scores = ScoreModel(score: scoresData["score"]!, tlScore: scoresData["tlScore"]!, dolarScore: scoresData["dolarScore"]!, euroScore: scoresData["euroScore"]!, poundScore: scoresData["poundScore"]!, goldScore: scoresData["goldScore"]!, bitcoinScore: scoresData["bitcoinScore"]!, etheriumScore: scoresData["etheriumScore"]!, dodgeScore: scoresData["dodgeScore"]!)
 
                                 let game = RatingModel(id: document.documentID, username: username as! String, scores: scores, gameType: data["gameType"] as! Int, gameLevel: data["gameLevel"] as! Int, date: self.convertFsDateToString(stamp: data["date"] ?? ""))
