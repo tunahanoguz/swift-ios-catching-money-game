@@ -10,10 +10,11 @@ import SwiftUI
 import FirebaseAuth
 
 struct HomeScreen: View {
+    @Binding var selectedTabIndex: Int
     @State var isAuthErrorExist: Bool = false
     
-    func printSomething() {
-        print("Print something.")
+    func changeSelectedTabIndex(index: Int) {
+        self.selectedTabIndex = index
     }
     
     func signOut() {
@@ -31,9 +32,9 @@ struct HomeScreen: View {
             VStack(spacing: 30.0) {
                 NewGameLink(text: "New game", firstColor: "#667eea", secondColor: "#764ba2", icon: "circle")
                 
-                HomeButton(text: "Show scores", buttonFunc: printSomething, firstColor: "#2af598", secondColor: "#009efd", icon: "waveform.path.ecg")
+                HomeButton(text: "Show scores", buttonFunc: {self.changeSelectedTabIndex(index: 1)}, firstColor: "#2af598", secondColor: "#009efd", icon: "waveform.path.ecg")
                 
-                HomeButton(text: "Show ratings", buttonFunc: printSomething, firstColor: "#6a11cb", secondColor: "#2575fc", icon: "rosette")
+                HomeButton(text: "Show ratings", buttonFunc: {self.changeSelectedTabIndex(index: 2)}, firstColor: "#6a11cb", secondColor: "#2575fc", icon: "rosette")
                 
                 HomeButton(text: "Sign out", buttonFunc: signOut, firstColor: "#ff0844", secondColor: "#ffb199", icon: "arrow.right.to.line.alt")
             }
@@ -48,7 +49,8 @@ struct HomeScreen: View {
 }
 
 struct HomeScreen_Previews: PreviewProvider {
+    @State static var selectedIndex: Int = 0
     static var previews: some View {
-        HomeScreen()
+        HomeScreen(selectedTabIndex: $selectedIndex)
     }
 }

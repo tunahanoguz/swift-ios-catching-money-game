@@ -12,6 +12,8 @@ import FirebaseAuth
 struct ContentView: View {
     @EnvironmentObject var session: SessionStore
     
+    @State var selectedTabIndex: Int = 0
+    
     func getUser () {
         session.listen()
     }
@@ -19,7 +21,7 @@ struct ContentView: View {
     var body: some View {
         Group {
             if session.session != nil {
-                NavigationTab()
+                NavigationTab(selectedTabIndex: $selectedTabIndex)
             } else {
                 SignInScreen()
             }
