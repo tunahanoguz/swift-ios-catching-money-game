@@ -8,6 +8,7 @@
 
 import Foundation
 import FirebaseFirestore
+import RealmSwift
 
 class GameService {
     func saveOnlineGame(userID: String, score: ScoreModel, gameType: Int, gameLevel: Int) {
@@ -35,6 +36,35 @@ class GameService {
                 print(error?.localizedDescription ?? "Error")
             }
         }
+    }
+    
+    func saveOfflineGame(userID: String, score: ScoreModel, gameType: Int, gameLevel: Int) {
+        let scores = ScoreRealmModel()
+        scores.score = score.score
+        scores.tlScore = score.tlScore
+        scores.euroScore = score.euroScore
+        scores.dolarScore = score.dolarScore
+        scores.poundScore = score.poundScore
+        scores.goldScore = score.goldScore
+        scores.bitcoinScore = score.bitcoinScore
+        scores.etheriumScore = score.etheriumScore
+        scores.dodgeScore = score.dodgeScore
+        
+        let game = GameRealmModel()
+        game.userID = userID
+        game.scores = scores
+        game.gameType = gameType
+        game.gameLevel = gameLevel
+        game.id = "\(UUID())"
+        
+        print(scores)
+        print(game)
+        
+//        let realm = try! Realm()
+//
+//        try! realm.write {
+//            realm.add(game)
+//        }
     }
     
     func getOnlineGames(setGames: @escaping ([GameModel]) -> Void) {
