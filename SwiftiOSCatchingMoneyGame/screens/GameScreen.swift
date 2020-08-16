@@ -79,7 +79,13 @@ struct GameScreen: View {
     }
     
     func saveGame() {
-        gameService.saveOnlineGame(userID: self.session.userInfo!.id, score: ScoreModel(score: totalScore, tlScore: tlScore, dolarScore: dolarScore, euroScore: euroScore, poundScore: poundScore, goldScore: goldScore, bitcoinScore: bitcoinScore, etheriumScore: etheriumScore, dodgeScore: dodgeScore), gameType: self.session.userInfo!.gameType, gameLevel: self.session.userInfo!.gameLevel)
+        let gameType = session.userInfo?.gameType
+        
+        if gameType == 0 {
+            gameService.saveOnlineGame(userID: self.session.userInfo!.id, score: ScoreModel(score: totalScore, tlScore: tlScore, dolarScore: dolarScore, euroScore: euroScore, poundScore: poundScore, goldScore: goldScore, bitcoinScore: bitcoinScore, etheriumScore: etheriumScore, dodgeScore: dodgeScore), gameType: self.session.userInfo!.gameType, gameLevel: self.session.userInfo!.gameLevel)
+        } else {
+            gameService.saveOfflineGame(userID: self.session.userInfo!.id, score: ScoreModel(score: totalScore, tlScore: tlScore, dolarScore: dolarScore, euroScore: euroScore, poundScore: poundScore, goldScore: goldScore, bitcoinScore: bitcoinScore, etheriumScore: etheriumScore, dodgeScore: dodgeScore), gameType: self.session.userInfo!.gameType, gameLevel: self.session.userInfo!.gameLevel)
+        }
     }
     
     var body: some View {
