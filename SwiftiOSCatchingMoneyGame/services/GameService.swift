@@ -153,6 +153,20 @@ class GameService {
         }
     }
     
+    func getSingleOfflineGame(scoreID: String, setGame: @escaping (GameModel) -> Void) {
+        let config = Realm.Configuration(fileURL: URL(fileURLWithPath: "/Users/tunahanoguz/Desktop/catchingMoneyGame.realm"), schemaVersion: 1)
+        Realm.Configuration.defaultConfiguration = config
+        
+        let realm = try! Realm()
+        let game = realm.objects(GameRealmModel.self).filter("id == '\(scoreID)'")[0]
+        let gameScores = game.scores
+        
+        let scores: ScoreModel = ScoreModel(score: gameScores!.score, tlScore: gameScores!.tlScore, dolarScore: gameScores!.dolarScore, euroScore: gameScores!.euroScore, poundScore: gameScores!.poundScore, goldScore: gameScores!.goldScore, bitcoinScore: gameScores!.bitcoinScore, etheriumScore: gameScores!.etheriumScore, dodgeScore: gameScores!.dodgeScore)
+        let innerGame: GameModel = GameModel(id: game.id, userID: game.userID, scores: scores, gameType: game.gameType, gameLevel: game.gameLevel, date: dateFormatter(date: game.date))
+        
+        setGame(innerGame)
+    }
+    
     func getGamesWithUsername(userID: String, setGames: @escaping ([RatingModel]) -> Void) {
         var fetchedGames: [RatingModel] = []
         let firestore = Firestore.firestore()
