@@ -15,7 +15,7 @@ class GameRealmModel: Object {
     @objc dynamic var scores: ScoreRealmModel? = ScoreRealmModel()
     @objc dynamic var gameType: Int = 0
     @objc dynamic var gameLevel: Int = 0
-    @objc dynamic var date: String = ""
+    @objc dynamic var date: Date = Date()
     
     override static func primaryKey() -> String? {
         return "id"
