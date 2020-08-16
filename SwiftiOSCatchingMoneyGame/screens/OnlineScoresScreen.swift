@@ -22,7 +22,7 @@ struct OnlineScoresScreen: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 10.0) {
             ForEach(games) { game in
-                ScoreItem(scoreID: game.id!, scoreType: game.gameType!, totalScore: (game.scores?.score)!, date: game.date!)
+                ScoreItem(scoreID: game.id!, scoreType: 0, totalScore: (game.scores?.score)!, date: game.date!)
             }
             
             Spacer()

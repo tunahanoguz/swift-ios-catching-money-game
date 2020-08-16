@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct OfflineScoresScreen: View {
+    @EnvironmentObject var topBarService: TopBarService
     @EnvironmentObject var session: SessionStore
     var gameService: GameService = GameService()
     
@@ -22,7 +23,7 @@ struct OfflineScoresScreen: View {
         VStack(alignment: .leading, spacing: 10.0) {
             if games.count != 0 {
                 ForEach(games) {game in
-                    ScoreItem(scoreID: game.id!, scoreType: game.gameType!, totalScore: game.scores!.score, date: game.date!)
+                    ScoreItem(scoreID: game.id!, scoreType: 1, totalScore: game.scores!.score, date: game.date!)
                 }
             } else {
                 Text("Games are loading...")
@@ -34,6 +35,8 @@ struct OfflineScoresScreen: View {
         .onAppear() {
             self.gameService.getOfflineGames(userID: self.session.userInfo?.id ?? "", setGames: self.setGames)
         }
+        .navigationBarTitle("")
+        .navigationBarHidden(self.topBarService.isShowedNavigationBar)
     }
 }
 
