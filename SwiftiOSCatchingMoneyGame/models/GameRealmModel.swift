@@ -12,12 +12,12 @@ import RealmSwift
 class GameRealmModel: Object {
     @objc dynamic var id: String = ""
     @objc dynamic var userID: String = ""
-    @objc dynamic var scores = ScoreRealmModel()
+    @objc dynamic var scores: ScoreRealmModel? = ScoreRealmModel()
     @objc dynamic var gameType: Int = 0
     @objc dynamic var gameLevel: Int = 0
     @objc dynamic var date: String = ""
     
     override static func primaryKey() -> String? {
-        return "id:\(UUID())"
+        return "id"
     }
 }
