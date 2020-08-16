@@ -10,6 +10,7 @@
 		06026B3224E436F400967877 /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06026B3124E436F300967877 /* HostingController.swift */; };
 		0607A82124E56FC3002AED46 /* SignUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0607A82024E56FC3002AED46 /* SignUpScreen.swift */; };
 		0607A82324E57368002AED46 /* SignInScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0607A82224E57368002AED46 /* SignInScreen.swift */; };
+		060FB45224E846A4009927DA /* GameRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060FB45124E846A4009927DA /* GameRealmModel.swift */; };
 		061A9E0F24E7A91B00855009 /* ScoreDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061A9E0E24E7A91B00855009 /* ScoreDetailScreen.swift */; };
 		061A9E1124E7AA8700855009 /* ScoreDetailItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061A9E1024E7AA8700855009 /* ScoreDetailItem.swift */; };
 		061A9E1324E7C41C00855009 /* TopBarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061A9E1224E7C41C00855009 /* TopBarService.swift */; };
@@ -52,6 +53,7 @@
 		06026B3124E436F300967877 /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
 		0607A82024E56FC3002AED46 /* SignUpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreen.swift; sourceTree = "<group>"; };
 		0607A82224E57368002AED46 /* SignInScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInScreen.swift; sourceTree = "<group>"; };
+		060FB45124E846A4009927DA /* GameRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRealmModel.swift; sourceTree = "<group>"; };
 		061A9E0E24E7A91B00855009 /* ScoreDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreDetailScreen.swift; sourceTree = "<group>"; };
 		061A9E1024E7AA8700855009 /* ScoreDetailItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScoreDetailItem.swift; path = /Users/tunahanoguz/projects/frontend/mobile/swiftui/SwiftiOSCatchingMoneyGame/SwiftiOSCatchingMoneyGame/components/ScoreDetailItem.swift; sourceTree = "<absolute>"; };
 		061A9E1224E7C41C00855009 /* TopBarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarService.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				0627CDE624E6852000E17BCD /* ScoreModel.swift */,
 				0627CDE824E6858C00E17BCD /* GameModel.swift */,
 				061A9E1624E80D5300855009 /* RatingModel.swift */,
+				060FB45124E846A4009927DA /* GameRealmModel.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				065943A024E517A700973731 /* SettingsScreen.swift in Sources */,
 				068C839824E3E96C00F5D1AF /* NavigationTab.swift in Sources */,
 				068C83A124E41B5E00F5D1AF /* ScoreItem.swift in Sources */,
+				060FB45224E846A4009927DA /* GameRealmModel.swift in Sources */,
 				068C838224E3DB9F00F5D1AF /* SceneDelegate.swift in Sources */,
 				061A9E0F24E7A91B00855009 /* ScoreDetailScreen.swift in Sources */,
 				065943AB24E5296600973731 /* GameScreen.swift in Sources */,
