@@ -13,6 +13,7 @@ struct ScoreDetailScreen: View {
     
     var gameService: GameService = GameService()
     var scoreID: String
+    var gameType: Int
     
     @State var game: GameModel = GameModel()
     
@@ -87,11 +88,11 @@ struct ScoreDetailScreen: View {
             .navigationBarTitle("Score Detail")
             .navigationBarHidden(false)
             .onAppear() {
-                self.gameService.getSingleGame(scoreID: self.scoreID, setGame: self.setGame)
-                
-//                self.topBarService.hideTabBar()
-//
-//                self.topBarService.hideNavigationBar()
+                if self.gameType == 0 {
+                    self.gameService.getSingleGame(scoreID: self.scoreID, setGame: self.setGame)
+                } else {
+                    self.gameService.getSingleOfflineGame(scoreID: self.scoreID, setGame: self.setGame)
+                }
             }
         }
     }
@@ -99,6 +100,6 @@ struct ScoreDetailScreen: View {
 
 struct ScoreDetailScreen_Previews: PreviewProvider {
     static var previews: some View {
-        ScoreDetailScreen(scoreID: "aSis6aBxW3Kd8nCdYSzo")
+        ScoreDetailScreen(scoreID: "aSis6aBxW3Kd8nCdYSzo", gameType: 0)
     }
 }

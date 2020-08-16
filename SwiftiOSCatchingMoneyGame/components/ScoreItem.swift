@@ -15,7 +15,7 @@ struct ScoreItem: View {
     var date: String
     
     var body: some View {
-        NavigationLink(destination: ScoreDetailScreen(scoreID: scoreID)) {
+        NavigationLink(destination: ScoreDetailScreen(scoreID: scoreID, gameType: scoreType)) {
             HStack {
                 VStack {
                     Text("Total Score")
