@@ -39,6 +39,9 @@ class GameService {
     }
     
     func saveOfflineGame(userID: String, score: ScoreModel, gameType: Int, gameLevel: Int) {
+        let config = Realm.Configuration(fileURL: URL(fileURLWithPath: "/Users/tunahanoguz/Desktop/catchingMoneyGame.realm"), schemaVersion: 1)
+        Realm.Configuration.defaultConfiguration = config
+        
         let scores = ScoreRealmModel()
         scores.score = score.score
         scores.tlScore = score.tlScore
@@ -57,14 +60,11 @@ class GameService {
         game.gameLevel = gameLevel
         game.id = "\(UUID())"
         
-        print(scores)
-        print(game)
-        
-//        let realm = try! Realm()
-//
-//        try! realm.write {
-//            realm.add(game)
-//        }
+        let realm = try! Realm()
+
+        try! realm.write {
+            realm.add(game, update: .modified)
+        }
     }
     
     func getOnlineGames(setGames: @escaping ([GameModel]) -> Void) {
@@ -114,6 +114,25 @@ class GameService {
                 setGames(innerGames)
             }
         }
+    }
+    
+    func getOfflineGames(userID: String, setGames: @escaping ([GameModel]) -> Void) {
+        let config = Realm.Configuration(fileURL: URL(fileURLWithPath: "/Users/tunahanoguz/Desktop/catchingMoneyGame.realm"), schemaVersion: 1)
+        Realm.Configuration.defaultConfiguration = config
+        
+        var innerGames: [GameModel] = []
+        
+        let realm = try! Realm()
+        let games = realm.objects(GameRealmModel.self).filter("userID == '\(userID)'").sorted(byKeyPath: "date", ascending: false)
+        
+        for game in games {
+            let scoreModel = ScoreModel(score: game.scores!.score, tlScore: game.scores!.tlScore, dolarScore: game.scores!.dolarScore, euroScore: game.scores!.euroScore, poundScore: game.scores!.poundScore, goldScore: game.scores!.goldScore, bitcoinScore: game.scores!.bitcoinScore, etheriumScore: game.scores!.etheriumScore, dodgeScore: game.scores!.dodgeScore)
+            let gameModel = GameModel(id: game.id, userID: game.userID, scores: scoreModel, gameType: game.gameType, gameLevel: game.gameLevel, date: dateFormatter(date: game.date))
+            
+            innerGames.append(gameModel)
+        }
+        
+        setGames(innerGames)
     }
     
     func getSingleGame(scoreID: String, setGame: @escaping (GameModel) -> Void) {
@@ -179,6 +198,13 @@ class GameService {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
         let formattedTimeZoneStr = formatter.string(from: aDate)
+        return formattedTimeZoneStr
+    }
+    
+    func dateFormatter(date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        let formattedTimeZoneStr = formatter.string(from: date)
         return formattedTimeZoneStr
     }
 }
