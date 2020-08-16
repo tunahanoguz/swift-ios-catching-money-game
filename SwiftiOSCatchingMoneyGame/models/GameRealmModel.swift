@@ -16,4 +16,8 @@ class GameRealmModel: Object {
     @objc dynamic var gameType: Int = 0
     @objc dynamic var gameLevel: Int = 0
     @objc dynamic var date: String = ""
+    
+    override static func primaryKey() -> String? {
+        return "id:\(UUID())"
+    }
 }
