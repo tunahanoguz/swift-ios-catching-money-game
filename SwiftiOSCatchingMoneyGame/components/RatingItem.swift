@@ -10,6 +10,7 @@ import SwiftUI
 
 struct RatingItem: View {
     var scoreID: String
+    var username: String
     var scoreType: Int
     var totalScore: Int
     var date: String
@@ -18,8 +19,9 @@ struct RatingItem: View {
         NavigationLink(destination: RatingDetailScreen(scoreID: scoreID)) {
             HStack {
                 VStack {
-                    Text("Total Score")
+                    Text(username)
                     .font(.system(size: 14.0))
+                    .italic()
                     
                     Text(String(totalScore))
                     .font(.system(size: 22.0))
@@ -42,6 +44,6 @@ struct RatingItem: View {
 
 struct RatingItem_Previews: PreviewProvider {
     static var previews: some View {
-        RatingItem(scoreID: "scoreID", scoreType: 0, totalScore: 10, date: "2020 August, 12")
+        RatingItem(scoreID: "scoreID", username: "tunahanoguz", scoreType: 0, totalScore: 10, date: "2020 August, 12")
     }
 }
