@@ -1,4 +1,4 @@
-## Catching Money Game with React Native
+## Catching Money Game with SwiftUI
 
 In this game, you will try to catch the most money in a certain time. These coins can be of many types, such as dollar, euro and bitcoin. 💰 Try to be the first! 🥇
 
