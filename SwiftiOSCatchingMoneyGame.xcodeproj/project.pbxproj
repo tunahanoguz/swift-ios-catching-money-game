@@ -48,6 +48,14 @@
 		06BB3AD324E66A1200C6CEB9 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BB3AD224E66A1200C6CEB9 /* UserModel.swift */; };
 		06E9CD3E24E8F5EE00D45AE2 /* ScoreRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E9CD3D24E8F5EE00D45AE2 /* ScoreRealmModel.swift */; };
 		06F8177B24EA5D0500ED05E4 /* ScoresButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F8177A24EA5D0500ED05E4 /* ScoresButton.swift */; };
+		06F8178724EA6D6C00ED05E4 /* SCORES.png in Resources */ = {isa = PBXBuildFile; fileRef = 06F8177F24EA6D6B00ED05E4 /* SCORES.png */; };
+		06F8178824EA6D6C00ED05E4 /* ONLINE-SCORES.png in Resources */ = {isa = PBXBuildFile; fileRef = 06F8178024EA6D6B00ED05E4 /* ONLINE-SCORES.png */; };
+		06F8178924EA6D6C00ED05E4 /* RATINGS.png in Resources */ = {isa = PBXBuildFile; fileRef = 06F8178124EA6D6B00ED05E4 /* RATINGS.png */; };
+		06F8178A24EA6D6C00ED05E4 /* SCORE-DETAIL.png in Resources */ = {isa = PBXBuildFile; fileRef = 06F8178224EA6D6B00ED05E4 /* SCORE-DETAIL.png */; };
+		06F8178B24EA6D6C00ED05E4 /* SETTINGS.png in Resources */ = {isa = PBXBuildFile; fileRef = 06F8178324EA6D6B00ED05E4 /* SETTINGS.png */; };
+		06F8178C24EA6D6C00ED05E4 /* OFFLINE-SCORES.png in Resources */ = {isa = PBXBuildFile; fileRef = 06F8178424EA6D6B00ED05E4 /* OFFLINE-SCORES.png */; };
+		06F8178D24EA6D6C00ED05E4 /* GAME.png in Resources */ = {isa = PBXBuildFile; fileRef = 06F8178524EA6D6B00ED05E4 /* GAME.png */; };
+		06F8178E24EA6D6C00ED05E4 /* HOME.png in Resources */ = {isa = PBXBuildFile; fileRef = 06F8178624EA6D6C00ED05E4 /* HOME.png */; };
 		71DD554AF84CB44DB8991AA8 /* Pods_SwiftiOSCatchingMoneyGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76753874A22FD8F8AFCCFB72 /* Pods_SwiftiOSCatchingMoneyGame.framework */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +103,14 @@
 		06BB3AD224E66A1200C6CEB9 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		06E9CD3D24E8F5EE00D45AE2 /* ScoreRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreRealmModel.swift; sourceTree = "<group>"; };
 		06F8177A24EA5D0500ED05E4 /* ScoresButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresButton.swift; sourceTree = "<group>"; };
+		06F8177F24EA6D6B00ED05E4 /* SCORES.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SCORES.png; sourceTree = "<group>"; };
+		06F8178024EA6D6B00ED05E4 /* ONLINE-SCORES.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ONLINE-SCORES.png"; sourceTree = "<group>"; };
+		06F8178124EA6D6B00ED05E4 /* RATINGS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RATINGS.png; sourceTree = "<group>"; };
+		06F8178224EA6D6B00ED05E4 /* SCORE-DETAIL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SCORE-DETAIL.png"; sourceTree = "<group>"; };
+		06F8178324EA6D6B00ED05E4 /* SETTINGS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SETTINGS.png; sourceTree = "<group>"; };
+		06F8178424EA6D6B00ED05E4 /* OFFLINE-SCORES.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OFFLINE-SCORES.png"; sourceTree = "<group>"; };
+		06F8178524EA6D6B00ED05E4 /* GAME.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GAME.png; sourceTree = "<group>"; };
+		06F8178624EA6D6C00ED05E4 /* HOME.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HOME.png; sourceTree = "<group>"; };
 		17B73D14C5A7A76D3DD7D5D6 /* Pods-SwiftiOSCatchingMoneyGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftiOSCatchingMoneyGame.debug.xcconfig"; path = "Target Support Files/Pods-SwiftiOSCatchingMoneyGame/Pods-SwiftiOSCatchingMoneyGame.debug.xcconfig"; sourceTree = "<group>"; };
 		76753874A22FD8F8AFCCFB72 /* Pods_SwiftiOSCatchingMoneyGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftiOSCatchingMoneyGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDE059982FA897A132B164FA /* Pods-SwiftiOSCatchingMoneyGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftiOSCatchingMoneyGame.release.xcconfig"; path = "Target Support Files/Pods-SwiftiOSCatchingMoneyGame/Pods-SwiftiOSCatchingMoneyGame.release.xcconfig"; sourceTree = "<group>"; };
@@ -156,6 +172,7 @@
 		068C837E24E3DB9F00F5D1AF /* SwiftiOSCatchingMoneyGame */ = {
 			isa = PBXGroup;
 			children = (
+				06F8177E24EA6D5900ED05E4 /* demo */,
 				0627CDEA24E6862F00E17BCD /* services */,
 				065943A324E51A8400973731 /* models */,
 				068C839924E3EAA200F5D1AF /* screens */,
@@ -217,6 +234,21 @@
 				061A9E1824E8138700855009 /* RatingDetailScreen.swift */,
 			);
 			path = screens;
+			sourceTree = "<group>";
+		};
+		06F8177E24EA6D5900ED05E4 /* demo */ = {
+			isa = PBXGroup;
+			children = (
+				06F8178524EA6D6B00ED05E4 /* GAME.png */,
+				06F8178624EA6D6C00ED05E4 /* HOME.png */,
+				06F8178424EA6D6B00ED05E4 /* OFFLINE-SCORES.png */,
+				06F8178024EA6D6B00ED05E4 /* ONLINE-SCORES.png */,
+				06F8178124EA6D6B00ED05E4 /* RATINGS.png */,
+				06F8178224EA6D6B00ED05E4 /* SCORE-DETAIL.png */,
+				06F8177F24EA6D6B00ED05E4 /* SCORES.png */,
+				06F8178324EA6D6B00ED05E4 /* SETTINGS.png */,
+			);
+			path = demo;
 			sourceTree = "<group>";
 		};
 		1BE6BC8813F2B99A871B2E73 /* Pods */ = {
@@ -296,10 +328,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06F8178E24EA6D6C00ED05E4 /* HOME.png in Resources */,
 				068C838C24E3DBA000F5D1AF /* LaunchScreen.storyboard in Resources */,
+				06F8178B24EA6D6C00ED05E4 /* SETTINGS.png in Resources */,
+				06F8178924EA6D6C00ED05E4 /* RATINGS.png in Resources */,
+				06F8178824EA6D6C00ED05E4 /* ONLINE-SCORES.png in Resources */,
+				06F8178724EA6D6C00ED05E4 /* SCORES.png in Resources */,
+				06F8178D24EA6D6C00ED05E4 /* GAME.png in Resources */,
 				06BB3AD124E6650D00C6CEB9 /* GoogleService-Info.plist in Resources */,
 				068C838924E3DBA000F5D1AF /* Preview Assets.xcassets in Resources */,
 				068C838624E3DBA000F5D1AF /* Assets.xcassets in Resources */,
+				06F8178C24EA6D6C00ED05E4 /* OFFLINE-SCORES.png in Resources */,
+				06F8178A24EA6D6C00ED05E4 /* SCORE-DETAIL.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
