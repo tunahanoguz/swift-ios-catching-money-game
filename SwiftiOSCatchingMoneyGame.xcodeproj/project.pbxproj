@@ -56,6 +56,7 @@
 		06F8178C24EA6D6C00ED05E4 /* OFFLINE-SCORES.png in Resources */ = {isa = PBXBuildFile; fileRef = 06F8178424EA6D6B00ED05E4 /* OFFLINE-SCORES.png */; };
 		06F8178D24EA6D6C00ED05E4 /* GAME.png in Resources */ = {isa = PBXBuildFile; fileRef = 06F8178524EA6D6B00ED05E4 /* GAME.png */; };
 		06F8178E24EA6D6C00ED05E4 /* HOME.png in Resources */ = {isa = PBXBuildFile; fileRef = 06F8178624EA6D6C00ED05E4 /* HOME.png */; };
+		06F8179224EA6E5D00ED05E4 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 06F8179124EA6E5D00ED05E4 /* README.md */; };
 		71DD554AF84CB44DB8991AA8 /* Pods_SwiftiOSCatchingMoneyGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76753874A22FD8F8AFCCFB72 /* Pods_SwiftiOSCatchingMoneyGame.framework */; };
 /* End PBXBuildFile section */
 
@@ -111,6 +112,7 @@
 		06F8178424EA6D6B00ED05E4 /* OFFLINE-SCORES.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OFFLINE-SCORES.png"; sourceTree = "<group>"; };
 		06F8178524EA6D6B00ED05E4 /* GAME.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GAME.png; sourceTree = "<group>"; };
 		06F8178624EA6D6C00ED05E4 /* HOME.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HOME.png; sourceTree = "<group>"; };
+		06F8179124EA6E5D00ED05E4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		17B73D14C5A7A76D3DD7D5D6 /* Pods-SwiftiOSCatchingMoneyGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftiOSCatchingMoneyGame.debug.xcconfig"; path = "Target Support Files/Pods-SwiftiOSCatchingMoneyGame/Pods-SwiftiOSCatchingMoneyGame.debug.xcconfig"; sourceTree = "<group>"; };
 		76753874A22FD8F8AFCCFB72 /* Pods_SwiftiOSCatchingMoneyGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftiOSCatchingMoneyGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDE059982FA897A132B164FA /* Pods-SwiftiOSCatchingMoneyGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftiOSCatchingMoneyGame.release.xcconfig"; path = "Target Support Files/Pods-SwiftiOSCatchingMoneyGame/Pods-SwiftiOSCatchingMoneyGame.release.xcconfig"; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 		068C837324E3DB9F00F5D1AF = {
 			isa = PBXGroup;
 			children = (
+				06F8179124EA6E5D00ED05E4 /* README.md */,
 				068C837E24E3DB9F00F5D1AF /* SwiftiOSCatchingMoneyGame */,
 				068C837D24E3DB9F00F5D1AF /* Products */,
 				1BE6BC8813F2B99A871B2E73 /* Pods */,
@@ -332,6 +335,7 @@
 				068C838C24E3DBA000F5D1AF /* LaunchScreen.storyboard in Resources */,
 				06F8178B24EA6D6C00ED05E4 /* SETTINGS.png in Resources */,
 				06F8178924EA6D6C00ED05E4 /* RATINGS.png in Resources */,
+				06F8179224EA6E5D00ED05E4 /* README.md in Resources */,
 				06F8178824EA6D6C00ED05E4 /* ONLINE-SCORES.png in Resources */,
 				06F8178724EA6D6C00ED05E4 /* SCORES.png in Resources */,
 				06F8178D24EA6D6C00ED05E4 /* GAME.png in Resources */,
