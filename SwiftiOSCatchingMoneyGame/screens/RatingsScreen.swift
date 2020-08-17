@@ -19,33 +19,22 @@ struct RatingsScreen: View {
         ratings = fetchedRatings
     }
     
-    func printSomething() {
-        print("Print something.")
-    }
-    
     var body: some View {
         NavigationView {
-            VStack(alignment: .leading, spacing: 10.0) {
-                ForEach(self.ratings) {rating in
-                    RatingItem(scoreID: rating.id!, scoreType: rating.gameType!, totalScore: rating.scores!.score, date: rating.date!)
-                }
-                
-                Button(action: printSomething) {
-                    Text("See All".uppercased())
-                        .fontWeight(Font.Weight.medium)
+            ScrollView {
+                VStack(alignment: .leading, spacing: 10.0) {
+                    ForEach(self.ratings) {rating in
+                        RatingItem(scoreID: rating.id!, username: rating.username!, scoreType: rating.gameType!, totalScore: rating.scores!.score, date: rating.date!)
+                    }
+                    
+                    Spacer()
                 }
                 .frame(maxWidth: .infinity)
-                .padding(.vertical, 10.0)
-                .background(Color.blue)
-                .foregroundColor(Color.white)
-                .cornerRadius(8.0)
-                
-                Spacer()
-            }
-            .padding(.horizontal, 18.0)
-            .navigationBarTitle("Ratings")
-            .onAppear() {
-                self.gameService.getGamesWithUsername(userID: self.session.userInfo!.id, setGames: self.setGames)
+                .padding(.horizontal, 18.0)
+                .navigationBarTitle("Ratings")
+                .onAppear() {
+                    self.gameService.getGamesWithUsername(userID: self.session.userInfo!.id, setGames: self.setGames)
+                }
             }
         }
     }
