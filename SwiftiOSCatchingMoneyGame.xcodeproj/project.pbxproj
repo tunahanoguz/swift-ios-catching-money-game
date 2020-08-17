@@ -47,6 +47,7 @@
 		06BB3AD124E6650D00C6CEB9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 06BB3AD024E6650D00C6CEB9 /* GoogleService-Info.plist */; };
 		06BB3AD324E66A1200C6CEB9 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BB3AD224E66A1200C6CEB9 /* UserModel.swift */; };
 		06E9CD3E24E8F5EE00D45AE2 /* ScoreRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E9CD3D24E8F5EE00D45AE2 /* ScoreRealmModel.swift */; };
+		06F8177B24EA5D0500ED05E4 /* ScoresButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F8177A24EA5D0500ED05E4 /* ScoresButton.swift */; };
 		71DD554AF84CB44DB8991AA8 /* Pods_SwiftiOSCatchingMoneyGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76753874A22FD8F8AFCCFB72 /* Pods_SwiftiOSCatchingMoneyGame.framework */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +94,7 @@
 		06BB3AD024E6650D00C6CEB9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		06BB3AD224E66A1200C6CEB9 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		06E9CD3D24E8F5EE00D45AE2 /* ScoreRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreRealmModel.swift; sourceTree = "<group>"; };
+		06F8177A24EA5D0500ED05E4 /* ScoresButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresButton.swift; sourceTree = "<group>"; };
 		17B73D14C5A7A76D3DD7D5D6 /* Pods-SwiftiOSCatchingMoneyGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftiOSCatchingMoneyGame.debug.xcconfig"; path = "Target Support Files/Pods-SwiftiOSCatchingMoneyGame/Pods-SwiftiOSCatchingMoneyGame.debug.xcconfig"; sourceTree = "<group>"; };
 		76753874A22FD8F8AFCCFB72 /* Pods_SwiftiOSCatchingMoneyGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftiOSCatchingMoneyGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDE059982FA897A132B164FA /* Pods-SwiftiOSCatchingMoneyGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftiOSCatchingMoneyGame.release.xcconfig"; path = "Target Support Files/Pods-SwiftiOSCatchingMoneyGame/Pods-SwiftiOSCatchingMoneyGame.release.xcconfig"; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 				065943AE24E5302D00973731 /* MoneyButton.swift */,
 				061A9E1424E7DB3B00855009 /* ScoreDetailItem.swift */,
 				061A9E1C24E81AFA00855009 /* RatingItem.swift */,
+				06F8177A24EA5D0500ED05E4 /* ScoresButton.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				061A9E1324E7C41C00855009 /* TopBarService.swift in Sources */,
 				061A9E1124E7AA8700855009 /* ScoreDetailItem.swift in Sources */,
 				06026B3224E436F400967877 /* HostingController.swift in Sources */,
+				06F8177B24EA5D0500ED05E4 /* ScoresButton.swift in Sources */,
 				0627CDE524E6816300E17BCD /* SessionStore.swift in Sources */,
 				065943A024E517A700973731 /* SettingsScreen.swift in Sources */,
 				068C839824E3E96C00F5D1AF /* NavigationTab.swift in Sources */,
