@@ -4,7 +4,7 @@ In this game, you will try to catch the most money in a certain time. These coin
 
 Home Screen | Settings Screen
 ------------ | -------------
-![Home Screen](./demo/HOME.png) | ![Settings Screen](./demo/SETTINGS.png)
+![Home Screen](./SwiftiOSCatchingMoneyGame/demo/HOME.png) | ![Settings Screen](./demo/SETTINGS.png)
 
 Game Screen | Ratings Screen
 ------------ | -------------
