@@ -175,34 +175,33 @@ class GameService {
         
         scoreCollection
         .order(by: "scores.score", descending: true)
-        .limit(to: 5)
-            .addSnapshotListener { (querySnapshot, error) in
-                if error == nil {
-                    let gameDocs = querySnapshot!.documents
-                    
-                    userCollection
-                    .whereField("id", isEqualTo: userID)
-                    .getDocuments { (querySnapshot, error) in
-                        if error == nil {
-                            let userDoc = querySnapshot?.documents[0]
-                            let userData = userDoc?.data()
-                            let username = userData?["username"]
+        .addSnapshotListener { (querySnapshot, error) in
+            if error == nil {
+                let gameDocs = querySnapshot!.documents
+                
+                userCollection
+                .whereField("id", isEqualTo: userID)
+                .getDocuments { (querySnapshot, error) in
+                    if error == nil {
+                        let userDoc = querySnapshot?.documents[0]
+                        let userData = userDoc?.data()
+                        let username = userData?["username"]
+                        
+                        for document in gameDocs {
+                            let data = document.data()
+                            let scoresData = data["scores"] as! [String: Int]
                             
-                            for document in gameDocs {
-                                let data = document.data()
-                                let scoresData = data["scores"] as! [String: Int]
-                                
-                                let scores = ScoreModel(score: scoresData["score"]!, tlScore: scoresData["tlScore"]!, dolarScore: scoresData["dolarScore"]!, euroScore: scoresData["euroScore"]!, poundScore: scoresData["poundScore"]!, goldScore: scoresData["goldScore"]!, bitcoinScore: scoresData["bitcoinScore"]!, etheriumScore: scoresData["etheriumScore"]!, dodgeScore: scoresData["dodgeScore"]!)
+                            let scores = ScoreModel(score: scoresData["score"]!, tlScore: scoresData["tlScore"]!, dolarScore: scoresData["dolarScore"]!, euroScore: scoresData["euroScore"]!, poundScore: scoresData["poundScore"]!, goldScore: scoresData["goldScore"]!, bitcoinScore: scoresData["bitcoinScore"]!, etheriumScore: scoresData["etheriumScore"]!, dodgeScore: scoresData["dodgeScore"]!)
 
-                                let game = RatingModel(id: document.documentID, username: username as! String, scores: scores, gameType: data["gameType"] as! Int, gameLevel: data["gameLevel"] as! Int, date: self.convertFsDateToString(stamp: data["date"] ?? ""))
-                                
-                                fetchedGames.append(game)
-                            }
+                            let game = RatingModel(id: document.documentID, username: username as! String, scores: scores, gameType: data["gameType"] as! Int, gameLevel: data["gameLevel"] as! Int, date: self.convertFsDateToString(stamp: data["date"] ?? ""))
                             
-                            setGames(fetchedGames)
+                            fetchedGames.append(game)
                         }
+                        
+                        setGames(fetchedGames)
                     }
                 }
+            }
         }
     }
     
