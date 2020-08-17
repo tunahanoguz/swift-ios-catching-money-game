@@ -19,7 +19,7 @@ struct SettingsItem: View {
             Text(title)
             .font(.system(size: 20.0))
             .fontWeight(Font.Weight.semibold)
-            .padding(.leading, 10.0)
+            .padding(.leading, 18.0)
             
             ForEach(details.indices) { index in
                 VStack {
@@ -41,7 +41,7 @@ struct SettingsItem: View {
                             
                             Image(systemName: self.state == index ? "largecircle.fill.circle" : "circle")
                         }
-                        .padding(.horizontal, 10.0)
+                        .padding(.horizontal, 18.0)
                     }
                     .foregroundColor(Color.black)
                     
